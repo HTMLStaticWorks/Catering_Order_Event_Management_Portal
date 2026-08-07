@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard | Royal Feast Events - AI Hospitality Suite</title>
+  <meta name="description" content="AI Event Planner, live order tracking, menu customization builder, guest count calculators, staff assignments, and invoice management.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Remix Icon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Aurora -->
+  <div class="bg-aurora-wrapper">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+  </div>
+  <div class="bg-noise"></div>
+
+  <!-- Header -->
+  <header class="navbar scrolled">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
+        <div class="logo-text">ROYAL <span>FEAST</span></div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item nav-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Home <i class="ri-chevron-down-line"></i></a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item"><i class="ri-home-4-line"></i> Home 01</a>
+            <a href="home-2.html" class="dropdown-item"><i class="ri-home-gear-line"></i> Home 02</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+        <div class="nav-item"><a href="menu.html" class="nav-link">Menu</a></div>
+        <div class="nav-item"><a href="dashboard.html" class="nav-link active">Dashboard</a></div>
+        <div class="nav-item"><a href="order-tracking.html" class="nav-link">Order Tracking</a></div>
+      </nav>
+
+      <!-- Navbar Controls (Theme, RTL, Dashboard, Track Order & Actions) -->
+      <div class="nav-controls">
+        <button class="nav-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <button class="nav-icon-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+          <i class="ri-global-line"></i>
+          <span>RTL</span>
+        </button>
+        <a href="dashboard.html" class="nav-icon-btn active" aria-label="Client Dashboard" title="Client Dashboard">
+          <i class="ri-dashboard-3-line"></i>
+        </a>
+        <a href="order-tracking.html" class="nav-icon-btn" aria-label="Track Order" title="Track Live Order">
+          <i class="ri-radar-line"></i>
+        </a>
+
+        <div class="nav-actions">
+          <button id="openChatBtn" class="btn-secondary" style="padding:8px 18px; font-size:0.85rem;"><i class="ri-chat-3-line"></i> Live Support</button>
+          <a href="index.html" class="btn-primary" style="padding: 8px 18px; font-size:0.85rem;">Logout</a>
+        </div>
+
+        <button class="hamburger-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-links">
+      <div class="drawer-dropdown">
+        <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
+        <div class="drawer-dropdown-menu">
+          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home Version 01</a>
+          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home Version 02</a>
+        </div>
+      </div>
+      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="services.html" class="drawer-link">Services</a>
+      <a href="menu.html" class="drawer-link">Culinary Menu</a>
+      <a href="event-types.html" class="drawer-link">Event Types</a>
+      <a href="packages.html" class="drawer-link">Packages & Pricing</a>
+      <a href="gallery.html" class="drawer-link">3D Gallery</a>
+      <a href="dashboard.html" class="drawer-link active">AI Client Dashboard</a>
+      <a href="order-tracking.html" class="drawer-link">Live Order Tracking</a>
+    </div>
+  </aside>
+
+  <!-- Dashboard Layout Wrapper -->
+  <div class="dashboard-wrapper">
+
+    <!-- Sidebar Navigation Pane -->
+    <aside class="dashboard-sidebar">
+      <a href="#overview" class="dash-nav-item active" data-target="dash-overview"><i class="ri-dashboard-line"></i> Overview</a>
+      <a href="#ai-planner" class="dash-nav-item" data-target="dash-ai-planner"><i class="ri-sparkles-line"></i> AI Event Planner</a>
+      <a href="#menu-builder" class="dash-nav-item" data-target="dash-menu-builder"><i class="ri-restaurant-2-line"></i> Menu Builder</a>
+      <a href="#guest-calc" class="dash-nav-item" data-target="dash-guest-calc"><i class="ri-user-star-line"></i> Guest & Budget Calc</a>
+      <a href="#live-tracking" class="dash-nav-item" data-target="dash-live-tracking"><i class="ri-radar-line"></i> Live Order Tracking</a>
+      <a href="#staff-assignment" class="dash-nav-item" data-target="dash-staff"><i class="ri-team-line"></i> Chef & Staff</a>
+      <a href="#invoices" class="dash-nav-item" data-target="dash-invoices"><i class="ri-file-list-3-line"></i> Invoices & Payments</a>
+    </aside>
+
+    <!-- Main Dashboard Content Area -->
+    <main class="dashboard-main">
+
+      <!-- PANE 1: OVERVIEW -->
+      <div id="dash-overview" class="dash-section-pane">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:30px;">
+          <div>
+            <h2 class="font-serif gold-gradient-text" style="font-size:2rem;">Welcome Back, Lord Harrington</h2>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Manage your active luxury catering orders and AI event planning suite.</p>
+          </div>
+          <a href="contact.html" class="btn-primary"><i class="ri-add-line"></i> Create New Event</a>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="dash-grid">
+          <div class="glass-card stat-widget">
+            <div class="stat-icon"><i class="ri-calendar-check-line"></i></div>
+            <div>
+              <div class="stat-value">02</div>
+              <div class="stat-label">Active Event Bookings</div>
+            </div>
+          </div>
+
+          <div class="glass-card stat-widget">
+            <div class="stat-icon"><i class="ri-user-heart-line"></i></div>
+            <div>
+              <div class="stat-value">350</div>
+              <div class="stat-label">Total Guests Confirmed</div>
+            </div>
+          </div>
+
+          <div class="glass-card stat-widget">
+            <div class="stat-icon"><i class="ri-wallet-3-line"></i></div>
+            <div>
+              <div class="stat-value">$33,250</div>
+              <div class="stat-label">Total Allocated Budget</div>
+            </div>
+          </div>
+
+          <div class="glass-card stat-widget">
+            <div class="stat-icon"><i class="ri-truck-line"></i></div>
+            <div>
+              <div class="stat-value" style="color:var(--success);">In Transit</div>
+              <div class="stat-label">Delivery Logistics Status</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Status Banner -->
+        <div class="glass-card" style="padding:28px; border-color:var(--gold-primary); margin-bottom:30px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <span class="section-tag" style="margin-bottom:8px;">★ Upcoming Priority Event</span>
+              <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem;">Harrington Grand Lake Gala</h3>
+              <p style="color:var(--text-secondary); font-size:0.9rem;">Date: April 15, 2027 • Location: Villa d'Este, Lake Como • Guests: 350</p>
+            </div>
+            <a href="order-tracking.html" class="btn-primary"><i class="ri-radar-line"></i> Live Tracking GPS</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 2: AI EVENT PLANNER -->
+      <div id="dash-ai-planner" class="dash-section-pane" style="display:none;">
+        <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:12px;">AI Hospitality Intelligence</h2>
+        <p style="color:var(--text-secondary); margin-bottom:24px;">Select your event parameters and let our neural algorithm construct a Michelin menu & decor concept.</p>
+
+        <div class="glass-card" style="padding:32px; margin-bottom:30px;">
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; margin-bottom:24px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Select Event Theme</label>
+              <select id="aiEventType" class="form-control">
+                <option value="wedding">Royal Imperial Wedding</option>
+                <option value="corporate">Executive Networking Gala</option>
+                <option value="private">Intimate VIP Chef Table</option>
+                <option value="birthday">Celebration Dessert Extravaganza</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Primary Culinary Vibe</label>
+              <select class="form-control">
+                <option>Modern European Fusion</option>
+                <option>Caspian Caviar & Seafood</option>
+                <option>Wagyu & Truffle Grill</option>
+                <option>Plant-Based Organic Gastronomy</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="generateAiPlanBtn" class="btn-primary" style="width:100%;">
+            <i class="ri-sparkles-line"></i> Generate AI Plan & Recommendation
+          </button>
+        </div>
+
+        <div id="aiPlannerOutput"></div>
+      </div>
+
+      <!-- PANE 3: MENU BUILDER -->
+      <div id="dash-menu-builder" class="dash-section-pane" style="display:none;">
+        <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:12px;">Interactive Custom Menu Builder</h2>
+        <p style="color:var(--text-secondary); margin-bottom:24px;">Check dishes to construct your bespoke banquet menu. Prices update dynamically.</p>
+
+        <div class="glass-card" style="padding:32px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid var(--border-glass);">
+            <div>
+              <span style="color:var(--text-secondary);">Selected Items: <strong id="selectedItemsCount" style="color:var(--gold-primary);">0</strong></span>
+            </div>
+            <div>
+              <span style="font-size:1.2rem; color:var(--text-primary);">Total Per Guest: <strong id="builderTotalPrice" class="gold-gradient-text">$0.00</strong></span>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-bottom:30px;">
+            <div class="menu-builder-item glass-card" style="padding:16px;">
+              <label style="display:flex; gap:12px; cursor:pointer;">
+                <input type="checkbox" data-price="85" style="accent-color:var(--gold-primary); width:20px; height:20px;">
+                <div>
+                  <h4 style="font-size:1rem; color:var(--text-primary);">Beluga Caviar Blinis ($85)</h4>
+                  <p style="font-size:0.8rem; color:var(--text-muted);">Caspian caviar, crème fraîche, chives.</p>
+                </div>
+              </label>
+            </div>
+
+            <div class="menu-builder-item glass-card" style="padding:16px;">
+              <label style="display:flex; gap:12px; cursor:pointer;">
+                <input type="checkbox" data-price="125" style="accent-color:var(--gold-primary); width:20px; height:20px;">
+                <div>
+                  <h4 style="font-size:1rem; color:var(--text-primary);">A5 Miyazaki Wagyu ($125)</h4>
+                  <p style="font-size:0.8rem; color:var(--text-muted);">Bone marrow jus, truffle fondant potato.</p>
+                </div>
+              </label>
+            </div>
+
+            <div class="menu-builder-item glass-card" style="padding:16px;">
+              <label style="display:flex; gap:12px; cursor:pointer;">
+                <input type="checkbox" data-price="95" style="accent-color:var(--gold-primary); width:20px; height:20px;">
+                <div>
+                  <h4 style="font-size:1rem; color:var(--text-primary);">Chilean Sea Bass ($95)</h4>
+                  <p style="font-size:0.8rem; color:var(--text-muted);">Saikyo miso glaze, saffron dashi broth.</p>
+                </div>
+              </label>
+            </div>
+
+            <div class="menu-builder-item glass-card" style="padding:16px;">
+              <label style="display:flex; gap:12px; cursor:pointer;">
+                <input type="checkbox" data-price="45" style="accent-color:var(--gold-primary); width:20px; height:20px;">
+                <div>
+                  <h4 style="font-size:1rem; color:var(--text-primary);">Valrhona Gold Sphere ($45)</h4>
+                  <p style="font-size:0.8rem; color:var(--text-muted);">70% Grand Cru dome, hot caramel syrup.</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn-primary" onclick="alert('Menu Configuration Saved to Your Order!')">Save Menu Configuration</button>
+        </div>
+      </div>
+
+      <!-- PANE 4: GUEST & BUDGET CALCULATOR -->
+      <div id="dash-guest-calc" class="dash-section-pane" style="display:none;">
+        <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:12px;">Dynamic Guest & Budget Calculator</h2>
+        <p style="color:var(--text-secondary); margin-bottom:24px;">Adjust the slider to instantly project budget totals and staff requirements.</p>
+
+        <div class="glass-card" style="padding:32px;">
+          <div class="form-group">
+            <label style="font-size:1rem;">Guest Count Slider: <strong id="guestCountVal" style="color:var(--gold-primary); font-size:1.4rem;">350</strong> Guests</label>
+            <input type="range" id="guestCountSlider" min="20" max="1000" step="10" value="350" style="width:100%; accent-color:var(--gold-primary); height:8px; margin-top:12px;">
+          </div>
+
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; margin-top:30px;">
+            <div class="glass-card" style="padding:20px; text-align:center;">
+              <span style="color:var(--text-muted); font-size:0.85rem;">Estimated Investment</span>
+              <h3 id="estimatedBudgetVal" class="font-serif gold-gradient-text" style="font-size:1.8rem;">$29,750</h3>
+            </div>
+
+            <div class="glass-card" style="padding:20px; text-align:center;">
+              <span style="color:var(--text-muted); font-size:0.85rem;">Required Culinary Staff</span>
+              <h3 id="estimatedStaffVal" class="font-serif gold-gradient-text" style="font-size:1.4rem;">24 Chefs & Servers</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 5: LIVE ORDER TRACKING -->
+      <div id="dash-live-tracking" class="dash-section-pane" style="display:none;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:20px;">
+          <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem;">Live Logistics & Order Telemetry</h2>
+          <span id="orderStatusBadge" class="section-tag" style="background:rgba(16,185,129,0.15); color:var(--success); border-color:var(--success);">Status: Culinary Preparation</span>
+        </div>
+
+        <div class="glass-card" style="padding:32px;">
+          <div style="background:rgba(255,255,255,0.05); height:8px; border-radius:4px; margin-bottom:30px; overflow:hidden;">
+            <div id="trackingProgressBar" style="width:60%; height:100%; background:var(--gold-gradient); transition:0.5s;"></div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:16px; text-align:center;">
+            <div class="tracking-step completed" style="cursor:pointer; padding:12px; border-radius:12px; background:rgba(212,175,55,0.1);">
+              <i class="ri-checkbox-circle-fill" style="color:var(--gold-primary); font-size:1.4rem;"></i>
+              <div class="step-name" style="font-size:0.85rem; font-weight:600; color:var(--gold-light);">Requirement</div>
+            </div>
+
+            <div class="tracking-step completed" style="cursor:pointer; padding:12px; border-radius:12px; background:rgba(212,175,55,0.1);">
+              <i class="ri-checkbox-circle-fill" style="color:var(--gold-primary); font-size:1.4rem;"></i>
+              <div class="step-name" style="font-size:0.85rem; font-weight:600; color:var(--gold-light);">Menu Finalized</div>
+            </div>
+
+            <div class="tracking-step active" style="cursor:pointer; padding:12px; border-radius:12px; border:1px solid var(--gold-primary);">
+              <i class="ri-fire-fill" style="color:var(--gold-primary); font-size:1.4rem;"></i>
+              <div class="step-name" style="font-size:0.85rem; font-weight:600; color:var(--text-primary);">Preparation</div>
+            </div>
+
+            <div class="tracking-step" style="cursor:pointer; padding:12px; border-radius:12px; background:rgba(255,255,255,0.03);">
+              <i class="ri-truck-line" style="color:var(--text-muted); font-size:1.4rem;"></i>
+              <div class="step-name" style="font-size:0.85rem; color:var(--text-muted);">Fleet Transit</div>
+            </div>
+
+            <div class="tracking-step" style="cursor:pointer; padding:12px; border-radius:12px; background:rgba(255,255,255,0.03);">
+              <i class="ri-goblet-line" style="color:var(--text-muted); font-size:1.4rem;"></i>
+              <div class="step-name" style="font-size:0.85rem; color:var(--text-muted);">Live Banquet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 6: CHEF & STAFF ASSIGNMENT -->
+      <div id="dash-staff" class="dash-section-pane" style="display:none;">
+        <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:12px;">Assigned Culinary Brigade</h2>
+        <p style="color:var(--text-secondary); margin-bottom:24px;">Your event is assigned dedicated Michelin-starred leads and certified sommeliers.</p>
+
+        <div class="dash-grid">
+          <div class="glass-card" style="padding:24px; text-align:center;">
+            <img src="image/Chefs at Work (10)as.jpg" alt="Chef Vance" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 12px auto; border:2px solid var(--gold-primary);">
+            <h4 class="font-serif gold-gradient-text">Chef Alexander Vance</h4>
+            <p style="color:var(--gold-light); font-size:0.8rem;">Executive Culinary Director</p>
+          </div>
+
+          <div class="glass-card" style="padding:24px; text-align:center;">
+            <img src="image/Chefs at Work (10)ds.jpg" alt="Chef Elena Rostova" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 12px auto; border:2px solid var(--gold-primary);">
+            <h4 class="font-serif gold-gradient-text">Elena Rostova</h4>
+            <p style="color:var(--gold-light); font-size:0.8rem;">Head Pastry Architect</p>
+          </div>
+
+          <div class="glass-card" style="padding:24px; text-align:center;">
+            <img src="image/Chefs at Work (10)ws.jpg" alt="Marcus Thorne" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 12px auto; border:2px solid var(--gold-primary);">
+            <h4 class="font-serif gold-gradient-text">Marcus Thorne</h4>
+            <p style="color:var(--gold-light); font-size:0.8rem;">Master Sommelier Lead</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 7: INVOICES -->
+      <div id="dash-invoices" class="dash-section-pane" style="display:none;">
+        <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:12px;">Invoice & Payment Records</h2>
+        <p style="color:var(--text-secondary); margin-bottom:24px;">Download audited PDF statements and payment receipts.</p>
+
+        <div class="glass-card" style="padding:24px; overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:left; color:var(--text-secondary); font-size:0.9rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--border-glass); color:var(--gold-primary);">
+                <th style="padding:12px;">Invoice #</th>
+                <th style="padding:12px;">Event Description</th>
+                <th style="padding:12px;">Amount</th>
+                <th style="padding:12px;">Status</th>
+                <th style="padding:12px;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:12px; font-weight:600; color:#fff;">#RF-2027-0891</td>
+                <td style="padding:12px;">Harrington Grand Lake Gala Deposit</td>
+                <td style="padding:12px;">$15,000.00</td>
+                <td style="padding:12px;"><span style="color:var(--success); background:rgba(16,185,129,0.1); padding:4px 10px; border-radius:12px; font-size:0.75rem;">Paid</span></td>
+                <td style="padding:12px;"><button class="btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Downloading PDF Invoice #RF-2027-0891...')"><i class="ri-download-line"></i> PDF</button></td>
+              </tr>
+
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                <td style="padding:12px; font-weight:600; color:#fff;">#RF-2027-0892</td>
+                <td style="padding:12px;">Harrington Final Catering Balance</td>
+                <td style="padding:12px;">$18,250.00</td>
+                <td style="padding:12px;"><span style="color:var(--warning); background:rgba(245,158,11,0.1); padding:4px 10px; border-radius:12px; font-size:0.75rem;">Pending</span></td>
+                <td style="padding:12px;"><button class="btn-primary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Opening Secure Payment Portal...')">Pay Balance</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-glass-box">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="logo-wrapper" style="margin-bottom: 16px;">
+              <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
+              <div class="logo-text">ROYAL <span>FEAST</span></div>
+            </a>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">
+              Setting the global 2027 gold standard in luxury catering, AI event management, and Michelin-caliber hospitality.
+            </p>
+            <div class="footer-social-icons">
+              <a href="#" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Twitter" title="Twitter"><i class="ri-twitter-x-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="ri-youtube-line"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <div class="footer-links">
+              <a href="index.html">Home 01</a>
+              <a href="home-2.html">Home 02</a>
+              <a href="about.html">About Heritage</a>
+              <a href="services.html">Luxury Services</a>
+              <a href="menu.html">Culinary Menu</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Client Portal</h4>
+            <div class="footer-links">
+              <a href="dashboard.html">AI Event Planner</a>
+              <a href="order-tracking.html">Live Order Tracking</a>
+              <a href="packages.html">Pricing Packages</a>
+              <a href="gallery.html">3D Photo Gallery</a>
+              <a href="testimonials.html">Client Testimonials</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Concierge & Support</h4>
+            <div class="footer-links">
+              <a href="contact.html">Contact Concierge</a>
+              <a href="login.html">Client Login</a>
+              <a href="register.html">Register Account</a>
+              <a href="404.html">System Diagnostics</a>
+              <a href="#">Privacy & Legal Policy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2027 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
+          <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Support Chat Modal Popup -->
+  <div id="supportChatModal" class="modal-wrapper">
+    <div class="modal-body glass-card" style="display:flex; flex-direction:column; height:500px; padding:0; overflow:hidden;">
+      <div style="padding:20px; background:var(--bg-secondary); border-bottom:1px solid var(--border-glass); display:flex; justify-content:space-between; align-items:center;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="logo-icon" style="width:36px; height:36px; font-size:1rem;"><i class="ri-sparkles-line"></i></div>
+          <div>
+            <h4 class="font-serif gold-gradient-text">Royal Concierge Live</h4>
+            <span style="font-size:0.75rem; color:var(--success);">● Active Agent Online</span>
+          </div>
+        </div>
+        <button id="closeChatBtn" style="font-size:1.5rem; color:#fff;">&times;</button>
+      </div>
+
+      <div id="chatMessagesBody" style="flex-grow:1; padding:20px; overflow-y:auto; display:flex; flex-direction:column; gap:12px;">
+        <div style="align-self:flex-start; background:rgba(255,255,255,0.08); color:var(--text-primary); padding:10px 16px; border-radius:16px 16px 16px 0; max-width:80%; font-size:0.9rem;">
+          <strong>Royal Concierge:</strong> Welcome Lord Harrington! How may our culinary directors assist your event preparation today?
+        </div>
+      </div>
+
+      <div style="padding:16px; background:var(--bg-secondary); border-top:1px solid var(--border-glass); display:flex; gap:10px;">
+        <input id="chatInputField" type="text" class="form-control" placeholder="Type your message or special request..." style="padding:10px 14px;">
+        <button id="sendChatMsgBtn" class="btn-primary" style="padding:10px 18px;"><i class="ri-send-plane-fill"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

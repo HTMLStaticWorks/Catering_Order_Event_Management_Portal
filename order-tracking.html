@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Event Order Tracking | Royal Feast Events</title>
+  <meta name="description" content="12-step real-time order tracking timeline for luxury catering requirements, culinary preparation, temperature-controlled delivery, venue setup, and service completion.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Remix Icon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="bg-aurora-wrapper">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+  </div>
+  <div class="bg-noise"></div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
+        <div class="logo-text">ROYAL <span>FEAST</span></div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item nav-dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Home <i class="ri-chevron-down-line"></i></a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item"><i class="ri-home-4-line"></i> Home 01</a>
+            <a href="home-2.html" class="dropdown-item"><i class="ri-home-gear-line"></i> Home 02</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+        <div class="nav-item"><a href="menu.html" class="nav-link">Menu</a></div>
+        <div class="nav-item"><a href="event-types.html" class="nav-link">Event Types</a></div>
+        <div class="nav-item"><a href="packages.html" class="nav-link">Packages</a></div>
+        <div class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <!-- Navbar Controls (Theme, RTL, Dashboard, Track Order & Actions) -->
+      <div class="nav-controls">
+        <button class="nav-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <button class="nav-icon-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+          <i class="ri-global-line"></i>
+          <span>RTL</span>
+        </button>
+        <a href="dashboard.html" class="nav-icon-btn" aria-label="Client Dashboard" title="Client Dashboard">
+          <i class="ri-dashboard-3-line"></i>
+        </a>
+        <a href="order-tracking.html" class="nav-icon-btn active" aria-label="Track Order" title="Track Live Order">
+          <i class="ri-radar-line"></i>
+        </a>
+
+        <div class="nav-actions">
+          <a href="contact.html" class="btn-primary" style="padding: 10px 24px; font-size:0.85rem;">Book Now</a>
+        </div>
+
+        <button class="hamburger-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-links">
+      <div class="drawer-dropdown">
+        <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
+        <div class="drawer-dropdown-menu">
+          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home Version 01</a>
+          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home Version 02</a>
+        </div>
+      </div>
+      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="services.html" class="drawer-link">Services</a>
+      <a href="menu.html" class="drawer-link">Culinary Menu</a>
+      <a href="event-types.html" class="drawer-link">Event Types</a>
+      <a href="packages.html" class="drawer-link">Packages & Pricing</a>
+      <a href="gallery.html" class="drawer-link">3D Gallery</a>
+      <a href="testimonials.html" class="drawer-link">Testimonials</a>
+      <a href="contact.html" class="drawer-link">Contact Us</a>
+      <a href="dashboard.html" class="drawer-link">AI Client Dashboard</a>
+      <a href="order-tracking.html" class="drawer-link active">Live Order Tracking</a>
+    </div>
+  </aside>
+
+  <!-- Banner -->
+  <section class="hero-section text-center" style="min-height:45vh; padding-top:160px; padding-bottom:40px;">
+    <div class="container">
+      <div class="section-tag"><i class="ri-radar-line"></i> 2027 Telemetry Engine</div>
+      <h1 class="section-title">Live 12-Step <span class="gold-gradient-text">Event Tracking</span></h1>
+      <p class="section-subtitle">Real-time status updates from culinary preparation to venue setup and live service.</p>
+    </div>
+  </section>
+
+  <!-- 12 Step Animated Journey Timeline -->
+  <section class="py-section">
+    <div class="container text-center">
+
+      <div class="glass-card" style="padding:24px; margin-bottom:50px; border-color:var(--gold-primary);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <div class="text-left">
+            <span style="color:var(--text-muted); font-size:0.85rem;">ACTIVE TRACKING CODE</span>
+            <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem;">#RF-LAKE-COMO-2027</h3>
+          </div>
+          <div>
+            <span class="section-tag" style="background:rgba(16,185,129,0.15); color:var(--success); border-color:var(--success);">Current Stage: Step 07 - Fire Cooking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- 1 -->
+        <div class="timeline-step">
+          <div class="timeline-badge" style="background:var(--gold-primary); color:#000;">✓</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">01. Requirement Submission</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Client dietary parameters and guest numbers logged into AI system.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="timeline-step">
+          <div class="timeline-badge" style="background:var(--gold-primary); color:#000;">✓</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">02. Executive Consultation</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Private tasting conducted with Executive Chef Alexander Vance.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="timeline-step">
+          <div class="timeline-badge" style="background:var(--gold-primary); color:#000;">✓</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">03. Quotation & Approval</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Tiered package confirmed and initial deposit verified.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="timeline-step">
+          <div class="timeline-badge" style="background:var(--gold-primary); color:#000;">✓</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">04. Menu Finalization</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Beluga Caviar, A5 Wagyu, and Dom Pérignon vintages locked in.</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="timeline-step">
+          <div class="timeline-badge" style="background:var(--gold-primary); color:#000;">✓</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">05. Organic Ingredient Sourcing</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Fresh organic produce gathered from partner sustainable estates.</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="timeline-step">
+          <div class="timeline-badge" style="background:var(--gold-primary); color:#000;">✓</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">06. Kitchen Sous Prep</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Precision chopping, marinating, and sous-vide thermal preparation.</p>
+          </div>
+        </div>
+
+        <!-- 7 ACTIVE -->
+        <div class="timeline-step">
+          <div class="timeline-badge" style="border-color:var(--gold-primary); background:var(--bg-primary); color:var(--gold-primary);">07</div>
+          <div class="glass-card timeline-content" style="border-color:var(--gold-primary); box-shadow:var(--shadow-gold);">
+            <h4 class="font-serif gold-gradient-text" style="font-size:1.3rem;">07. Live Fire Cooking (ACTIVE NOW)</h4>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Master chefs sear Wagyu striploins and plate Beluga appetizers in mobile culinary unit.</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">08</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">08. Temperature Controlled Packing</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Dishes secured in smart thermal containers for flawless transit.</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">09</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">09. Fleet GPS Delivery Transit</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Custom refrigerated vans en route with real-time GPS telemetry.</p>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">10</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">10. Venue Styling & Banquet Setup</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Crystal chandeliers, floral centerpieces, and gold cutlery arranged.</p>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">11</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">11. Live White-Glove Serving</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Personal butler service and live interactive chef cooking stations.</p>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">12</div>
+          <div class="glass-card timeline-content">
+            <h4 class="font-serif gold-gradient-text">12. Completion & Audit</h4>
+            <p style="color:var(--text-muted); font-size:0.85rem;">Post-event breakdown, client sign-off, and feedback rating.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-glass-box">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="logo-wrapper" style="margin-bottom: 16px;">
+              <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
+              <div class="logo-text">ROYAL <span>FEAST</span></div>
+            </a>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">
+              Setting the global 2027 gold standard in luxury catering, AI event management, and Michelin-caliber hospitality.
+            </p>
+            <div class="footer-social-icons">
+              <a href="#" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Twitter" title="Twitter"><i class="ri-twitter-x-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="ri-youtube-line"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <div class="footer-links">
+              <a href="index.html">Home 01</a>
+              <a href="home-2.html">Home 02</a>
+              <a href="about.html">About Heritage</a>
+              <a href="services.html">Luxury Services</a>
+              <a href="menu.html">Culinary Menu</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Client Portal</h4>
+            <div class="footer-links">
+              <a href="dashboard.html">AI Event Planner</a>
+              <a href="order-tracking.html">Live Order Tracking</a>
+              <a href="packages.html">Pricing Packages</a>
+              <a href="gallery.html">3D Photo Gallery</a>
+              <a href="testimonials.html">Client Testimonials</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Concierge & Support</h4>
+            <div class="footer-links">
+              <a href="contact.html">Contact Concierge</a>
+              <a href="login.html">Client Login</a>
+              <a href="register.html">Register Account</a>
+              <a href="404.html">System Diagnostics</a>
+              <a href="#">Privacy & Legal Policy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2027 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
+          <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
