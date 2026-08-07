@@ -1349,7 +1349,8 @@ button {
 
 .form-group label {
   font-size: 0.85rem;
-  color: var(--gold-light);
+  font-weight: 600;
+  color: var(--text-primary);
   letter-spacing: 0.5px;
 }
 
@@ -1931,9 +1932,39 @@ body.light-mode .navbar.scrolled {
 }
 
 body.light-mode .glass-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+  color: #18181b !important;
+}
+
+body.light-mode .form-group label,
+body.light-mode label {
+  color: #18181b !important;
+  font-weight: 600 !important;
+}
+
+body.light-mode .form-control {
+  background: #ffffff !important;
+  color: #18181b !important;
+  border: 1px solid rgba(0, 0, 0, 0.22) !important;
+}
+
+body.light-mode .form-control::placeholder {
+  color: #71717a !important;
+}
+
+body.light-mode .form-control:focus {
+  border-color: #aa820a !important;
+  box-shadow: 0 0 12px rgba(170, 130, 10, 0.25) !important;
+}
+
+body.light-mode a {
+  color: #996e00;
+}
+
+body.light-mode a:hover {
+  color: #7c5c00;
 }
 
 body.light-mode .hero-content {
