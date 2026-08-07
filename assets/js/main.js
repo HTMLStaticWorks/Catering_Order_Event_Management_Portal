@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initTiltCards();
   initAccordions();
   initCounterAnimations();
+  initCustomMagneticCursor();
+  initSparkleClickParticles();
 });
 
 /* --------------------------------------------------------------------------
@@ -388,3 +390,96 @@ function initThemeAndRtl() {
     });
   });
 }
+
+/* --------------------------------------------------------------------------
+   9. CUSTOM MAGNETIC GOLD CURSOR
+   -------------------------------------------------------------------------- */
+function initCustomMagneticCursor() {
+  if (window.innerWidth <= 1024) return;
+
+  document.body.classList.add('has-custom-cursor');
+
+  let cursor = document.querySelector('.custom-cursor');
+  let follower = document.querySelector('.custom-cursor-follower');
+
+  if (!cursor) {
+    cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+  }
+
+  if (!follower) {
+    follower = document.createElement('div');
+    follower.className = 'custom-cursor-follower';
+    document.body.appendChild(follower);
+  }
+
+  let posX = 0, posY = 0;
+  let mouseX = 0, mouseY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = `${mouseX}px`;
+    cursor.style.top = `${mouseY}px`;
+  });
+
+  function renderCursor() {
+    posX += (mouseX - posX) * 0.16;
+    posY += (mouseY - posY) * 0.16;
+    follower.style.left = `${posX}px`;
+    follower.style.top = `${posY}px`;
+    requestAnimationFrame(renderCursor);
+  }
+  renderCursor();
+
+  // Attach hover state to interactive elements
+  const hoverElements = 'a, button, .glass-card, input, select, textarea, .tab-btn, .accordion-header';
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest(hoverElements)) {
+      document.body.classList.add('cursor-hover');
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest(hoverElements)) {
+      document.body.classList.remove('cursor-hover');
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   10. GOLDEN SPARKLE BURST ON CLICK
+   -------------------------------------------------------------------------- */
+function initSparkleClickParticles() {
+  document.addEventListener('click', (e) => {
+    const targetBtn = e.target.closest('button, .btn-primary, .btn-secondary, a.service-link');
+    if (!targetBtn) return;
+
+    for (let i = 0; i < 14; i++) {
+      const sparkle = document.createElement('span');
+      sparkle.className = 'sparkle-particle';
+      document.body.appendChild(sparkle);
+
+      const x = e.clientX;
+      const y = e.clientY;
+      const destinationX = (Math.random() - 0.5) * 160;
+      const destinationY = (Math.random() - 0.5) * 160;
+      const size = Math.random() * 6 + 4;
+
+      sparkle.style.left = `${x}px`;
+      sparkle.style.top = `${y}px`;
+      sparkle.style.width = `${size}px`;
+      sparkle.style.height = `${size}px`;
+
+      sparkle.animate([
+        { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+        { transform: `translate(${destinationX}px, ${destinationY}px) scale(0)`, opacity: 0 }
+      ], {
+        duration: 700 + Math.random() * 400,
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
+      }).onfinish = () => sparkle.remove();
+    }
+  });
+}
+

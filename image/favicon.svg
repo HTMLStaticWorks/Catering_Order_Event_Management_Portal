@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7e7ce" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#aa820a" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0a0a0c" />
+  <rect width="60" height="60" x="2" y="2" rx="14" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6" />
+  <!-- Goblet / Crown Icon -->
+  <path d="M20 18 L44 18 C44 28 36 34 32 36 C28 34 20 28 20 18 Z" fill="url(#goldGrad)" />
+  <path d="M30 36 L30 46 L24 48 L24 51 L40 51 L40 48 L34 46 L34 36 Z" fill="url(#goldGrad)" />
+  <circle cx="32" cy="14" r="3" fill="#ffffff" opacity="0.9" />
+</svg>
