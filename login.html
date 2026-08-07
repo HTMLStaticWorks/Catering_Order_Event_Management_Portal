@@ -29,90 +29,35 @@
   </div>
   <div class="bg-noise"></div>
 
-  <!-- Header -->
-  <header class="navbar">
-    <div class="container navbar-container">
-      <a href="index.html" class="logo-wrapper">
-        <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-        <div class="logo-text">ROYAL <span>FEAST</span></div>
-      </a>
-
-      <!-- Navbar Controls (Theme, RTL, Login, Dashboard, Track Order & Actions) -->
-      <div class="nav-controls">
-        <button class="nav-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
-          <i class="ri-moon-line"></i>
-        </button>
-        <button class="nav-icon-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
-          <i class="ri-arrow-left-right-line"></i>
-        </button>
-        <a href="login.html" class="nav-icon-btn active" aria-label="Client Login" title="Client Login">
-          <i class="ri-user-3-line"></i>
-        </a>
-        <a href="dashboard.html" class="nav-icon-btn" aria-label="Client Dashboard" title="Client Dashboard">
-          <i class="ri-dashboard-3-line"></i>
-        </a>
-        <a href="order-tracking.html" class="nav-icon-btn" aria-label="Track Order" title="Track Live Order">
-          <i class="ri-radar-line"></i>
-        </a>
-
-        <div class="nav-actions">
-          <a href="contact.html" class="btn-primary" style="padding: 10px 24px; font-size:0.85rem;">Book Now</a>
-        </div>
-
-        <button class="hamburger-toggle" aria-label="Toggle Navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="drawer-overlay"></div>
-  <aside class="mobile-drawer">
-    <div class="drawer-links">
-      <div class="drawer-dropdown">
-        <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
-        <div class="drawer-dropdown-menu">
-          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home Version 01</a>
-          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home Version 02</a>
-        </div>
-      </div>
-      <a href="about.html" class="drawer-link">About Us</a>
-      <a href="services.html" class="drawer-link">Services</a>
-      <a href="menu.html" class="drawer-link">Culinary Menu</a>
-      <a href="event-types.html" class="drawer-link">Event Types</a>
-      <a href="packages.html" class="drawer-link">Packages & Pricing</a>
-      <a href="gallery.html" class="drawer-link">3D Gallery</a>
-      <a href="testimonials.html" class="drawer-link">Testimonials</a>
-      <a href="contact.html" class="drawer-link">Contact Us</a>
-      <a href="dashboard.html" class="drawer-link">AI Client Dashboard</a>
-      <a href="order-tracking.html" class="drawer-link">Live Order Tracking</a>
-      <a href="login.html" class="drawer-link active">Login</a>
-      <a href="register.html" class="drawer-link">Register</a>
-    </div>
-    <div class="drawer-cta">
-      <a href="contact.html" class="btn-primary">Book Catering</a>
-      <a href="dashboard.html" class="btn-secondary">Get Instant Quote</a>
-    </div>
-  </aside>
+  <!-- Standalone Controls (Top Bar) -->
+  <div style="position:fixed; top:20px; right:20px; z-index:100; display:flex; gap:10px;">
+    <button class="nav-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+      <i class="ri-moon-line"></i>
+    </button>
+    <button class="nav-icon-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+      <i class="ri-arrow-left-right-line"></i>
+    </button>
+  </div>
 
   <!-- Login Section -->
-  <section class="hero-section text-center" style="min-height:90vh; padding-top:140px;">
+  <section class="hero-section text-center" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:40px 20px;">
     <div class="container">
       <div class="glass-card" style="max-width:480px; margin:0 auto; padding:40px;">
-        <div class="logo-icon" style="margin:0 auto 16px auto;"><i class="ri-shield-user-line"></i></div>
+        <a href="index.html" class="logo-wrapper" style="display:inline-flex; margin-bottom:20px; text-decoration:none;">
+          <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
+          <div class="logo-text">ROYAL <span>FEAST</span></div>
+        </a>
+        
         <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:8px;">Client Portal Login</h2>
         <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Access your 2026 AI event suite & live logistics tracker.</p>
 
         <form action="dashboard.html" method="GET">
-          <div class="form-group">
+          <div class="form-group" style="text-align:left;">
             <label>Email Address / Corporate ID</label>
             <input type="email" class="form-control" value="client@royalfeast.com" required>
           </div>
 
-          <div class="form-group">
+          <div class="form-group" style="text-align:left;">
             <label>Password</label>
             <input type="password" class="form-control" value="••••••••••••" required>
           </div>
@@ -132,8 +77,13 @@
         <div style="margin-top:24px; font-size:0.9rem; color:var(--text-muted);">
           Don't have an event portal account? <a href="register.html" style="color:var(--gold-primary);">Register Now</a>
         </div>
+        
+        <div style="margin-top:16px; font-size:0.85rem;">
+          <a href="index.html" style="color:var(--text-secondary); text-decoration:none;"><i class="ri-arrow-left-line"></i> Return to Main Website</a>
+        </div>
       </div>
     </div>
+  </section>
 
 
   <!-- Scripts -->
