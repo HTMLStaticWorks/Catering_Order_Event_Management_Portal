@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Packages & Pricing | Royal Feast Events - 2026 Luxury Tiered Packages</title>
-  <meta name="description" content="Explore tiered catering & event packages: Silver Feast, Royal Velvet, Imperial Gold, and Diamond Signature tier.">
+  <meta name="description"
+    content="Explore tiered catering & event packages: Silver Feast, Royal Velvet, Imperial Gold, and Diamond Signature tier.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- Remix Icon CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
@@ -21,6 +25,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 
   <div class="bg-aurora-wrapper">
@@ -34,7 +39,7 @@
     <div class="container navbar-container">
       <a href="index.html" class="logo-wrapper">
         <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-        <div class="logo-text">ROYAL <span>FEAST</span></div>
+        <div class="logo-text"><span>FEAST</span></div>
       </a>
 
       <nav class="nav-links">
@@ -88,30 +93,45 @@
   <!-- Mobile Drawer -->
   <div class="drawer-overlay"></div>
   <aside class="mobile-drawer">
+    <!-- Quick Tools & Actions (Theme, RTL, Login, Dashboard, Order Tracking) -->
+    <div class="drawer-tools">
+      <button class="drawer-tool-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <i class="ri-moon-line"></i>
+        <span>Theme</span>
+      </button>
+      <button class="drawer-tool-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+        <i class="ri-arrow-left-right-line"></i>
+        <span>RTL</span>
+      </button>
+      <a href="login.html" class="drawer-tool-btn" title="Client Login">
+        <i class="ri-user-3-line"></i>
+        <span>Login</span>
+      </a>
+      <a href="dashboard.html" class="drawer-tool-btn" title="Client Dashboard">
+        <i class="ri-dashboard-3-line"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="order-tracking.html" class="drawer-tool-btn" title="Track Live Order">
+        <i class="ri-radar-line"></i>
+        <span>Track Order</span>
+      </a>
+    </div>
+
     <div class="drawer-links">
       <div class="drawer-dropdown">
         <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
         <div class="drawer-dropdown-menu">
-          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home Version 01</a>
-          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home Version 02</a>
+          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home 01</a>
+          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home 02</a>
         </div>
       </div>
-      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="about.html" class="drawer-link">About</a>
       <a href="services.html" class="drawer-link">Services</a>
-      <a href="menu.html" class="drawer-link">Culinary Menu</a>
-      <a href="event-types.html" class="drawer-link">Event Types</a>
-      <a href="packages.html" class="drawer-link active">Packages & Pricing</a>
-      <a href="gallery.html" class="drawer-link">3D Gallery</a>
-      <a href="testimonials.html" class="drawer-link">Testimonials</a>
-      <a href="contact.html" class="drawer-link">Contact Us</a>
-      <a href="dashboard.html" class="drawer-link">AI Client Dashboard</a>
-      <a href="order-tracking.html" class="drawer-link">Live Order Tracking</a>
-      <a href="login.html" class="drawer-link">Login</a>
-      <a href="register.html" class="drawer-link">Register</a>
-    </div>
-    <div class="drawer-cta">
-      <a href="contact.html" class="btn-primary">Book Catering</a>
-      <a href="dashboard.html" class="btn-secondary">Get Instant Quote</a>
+      <a href="menu.html" class="drawer-link">Menu</a>
+      <a href="event-types.html" class="drawer-link">Event</a>
+      <a href="packages.html" class="drawer-link active">Packages</a>
+      <a href="gallery.html" class="drawer-link">Gallery</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
     </div>
   </aside>
 
@@ -122,22 +142,27 @@
     <div class="container hero-content">
       <div class="section-tag"><i class="ri-price-tag-3-line"></i> Transparent Luxury Investment</div>
       <h1 class="section-title">2026 Tiered <span class="gold-gradient-text">Packages & Pricing</span></h1>
-      <p class="section-subtitle">Tailored for events of all scales with customizable menu add-ons and white-glove staffing.</p>
+      <p class="section-subtitle">Tailored for events of all scales with customizable menu add-ons and white-glove
+        staffing.</p>
     </div>
   </section>
 
   <!-- Packages Grid -->
   <section class="py-section">
     <div class="container text-center">
-      <div class="services-grid">
+      <div class="packages-grid services-grid">
 
         <!-- Tier 1 -->
-        <div class="glass-card" style="padding:36px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div class="glass-card"
+          style="padding:36px; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div class="section-tag" style="margin-bottom:12px;">Silver Feast</div>
-            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-bottom:8px;">$65 <span style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
-            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Ideal for intimate gatherings, birthdays, and cocktail receptions.</p>
-            <ul style="color:var(--text-secondary); font-size:0.9rem; text-align:left; display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
+            <div class="section-tag" style="margin-bottom:20px;">Silver Feast</div>
+            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-top:8px; margin-bottom:14px;">$65 <span
+                style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Ideal for intimate gatherings,
+              birthdays, and cocktail receptions.</p>
+            <ul
+              style="color:var(--text-secondary); font-size:0.9rem; text-align:left; display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 3-Course Gourmet Plated Dinner</li>
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Standard Bar & Organic Juices</li>
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Elegant Table Linen & Cutlery</li>
@@ -148,33 +173,47 @@
         </div>
 
         <!-- Tier 2 (Featured) -->
-        <div class="glass-card" style="padding:36px; border-color:var(--gold-primary); transform:scale(1.03); display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-gold);">
+        <div class="glass-card"
+          style="padding:36px; border-color:var(--gold-primary); transform:scale(1.03); display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-gold);">
           <div>
-            <div class="section-tag" style="background:var(--gold-gradient); color:#000; font-weight:700; margin-bottom:12px;">★ Most Popular</div>
-            <h3 class="font-serif gold-gradient-text" style="font-size:2.4rem; margin-bottom:8px;">$95 <span style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
-            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Perfect for weddings, corporate galas, and anniversary banquets.</p>
-            <ul style="color:var(--text-secondary); font-size:0.9rem; text-align:left; display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
-              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 5-Course Michelin-Caliber Tasting</li>
+            <div class="section-tag"
+              style="background:var(--gold-gradient); color:#000; font-weight:700; margin-bottom:20px;">★ Most Popular
+            </div>
+            <h3 class="font-serif gold-gradient-text" style="font-size:2.4rem; margin-top:8px; margin-bottom:14px;">$95 <span
+                style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Perfect for weddings,
+              corporate galas, and anniversary banquets.</p>
+            <ul
+              style="color:var(--text-secondary); font-size:0.9rem; text-align:left; display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
+              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 5-Course Michelin-Caliber Tasting
+              </li>
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Premium Wine Pairing & Craft Bar</li>
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 2 Live Interactive Chef Stations</li>
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Luxury Ambient Floral Styling</li>
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Live Order GPS Telemetry</li>
             </ul>
           </div>
-          <a href="dashboard.html" class="btn-primary">Select Royal Velvet Package</a>
+          <a href="dashboard.html" class="btn-primary">Select Royal Velvet </a>
         </div>
 
         <!-- Tier 3 -->
-        <div class="glass-card" style="padding:36px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div class="glass-card"
+          style="padding:36px; display:flex; flex-direction:column; justify-content:space-between; grid-column: 1 / -1; max-width:480px; width:100%; margin:0 auto;">
           <div>
-            <div class="section-tag" style="margin-bottom:12px;">Diamond Signature</div>
-            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-bottom:8px;">$175 <span style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
-            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Ultra-VIP state dinners, celebrity galas, and yacht events.</p>
-            <ul style="color:var(--text-secondary); font-size:0.9rem; text-align:left; display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
+            <div class="section-tag" style="margin-bottom:20px;">Diamond Signature</div>
+            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-top:8px; margin-bottom:14px;">$175 <span
+                style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Ultra-VIP state dinners,
+              celebrity galas, and yacht events.</p>
+            <ul
+              style="color:var(--text-secondary); font-size:0.9rem; text-align:left; display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 7-Course Caviar & Wagyu Tasting</li>
-              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Master Sommelier Cellar Selection</li>
-              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Gold Foil Tableware & Baccarat Glass</li>
-              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Dedicated Personal Butler per Table</li>
+              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Master Sommelier Cellar Selection
+              </li>
+              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Gold Foil Tableware & Baccarat Glass
+              </li>
+              <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Dedicated Personal Butler per Table
+              </li>
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 3D Projection Mapping on Plates</li>
             </ul>
           </div>
@@ -190,7 +229,8 @@
     <div class="container text-center">
       <span class="section-tag"><i class="ri-table-line"></i> Comprehensive Comparison</span>
       <h2 class="section-title">Package Tier <span class="gold-gradient-text">Feature Matrix</span></h2>
-      <p class="section-subtitle">Detailed breakdown of included amenities, butler ratios, and wine selections across our 3 luxury tiers.</p>
+      <p class="section-subtitle">Detailed breakdown of included amenities, butler ratios, and wine selections across
+        our 3 luxury tiers.</p>
 
       <div class="glass-card" style="padding: 24px; overflow-x: auto;">
         <table class="matrix-table">
@@ -244,33 +284,45 @@
     <div class="container text-center">
       <span class="section-tag"><i class="ri-add-circle-line"></i> Enhancements</span>
       <h2 class="section-title">Seasonal Luxury <span class="gold-gradient-text">Add-On Experiences</span></h2>
-      <p class="section-subtitle">Elevate any tier with standalone caviar bars, nitrogen dessert towers, and vintage cognac tastings.</p>
-
+      <p class="section-subtitle">Elevate any tier with standalone caviar bars, nitrogen dessert towers, and vintage
+        cognac tastings.</p>
       <div class="grid-3-col">
-        <div class="glow-gold-card tilt-card-3d" style="padding: 28px; text-align: left;">
-          <div class="img-zoom-wrapper" style="height: 180px; border-radius: 12px; margin-bottom: 16px;">
-            <img src="image/Desserts & Bakery (8.jpgDWQ.jpg" alt="Imperial Caviar Bar">
+        <div class="glow-gold-card tilt-card-3d text-center"
+          style="padding: 28px; display: flex; flex-direction: column; align-items: center;">
+          <div class="img-zoom-wrapper" style="height: 180px; width: 100%; border-radius: 12px; margin-bottom: 16px;">
+            <img src="image/Desserts & Bakery (8.jpgDWQ.jpg" alt="Imperial Caviar Bar"
+              style="width:100%; height:100%; object-fit:cover;">
           </div>
-          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Beluga Caviar Bar</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px;">Caspian Beluga caviar served on ice sculptures with mother-of-pearl spoons and ice-cold Belvedere vodka shots.</p>
+          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Beluga Caviar Bar
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px; text-align: center;">Caspian
+            Beluga caviar served on ice sculptures with mother-of-pearl spoons and ice-cold Belvedere vodka shots.</p>
           <span style="color: var(--gold-primary); font-weight: 700;">+$45 / guest</span>
         </div>
 
-        <div class="glow-gold-card tilt-card-3d" style="padding: 28px; text-align: left;">
-          <div class="img-zoom-wrapper" style="height: 180px; border-radius: 12px; margin-bottom: 16px;">
-            <img src="image/Live Food Counters (8).jpg" alt="Liquid Nitrogen Dessert Alchemy">
+        <div class="glow-gold-card tilt-card-3d text-center"
+          style="padding: 28px; display: flex; flex-direction: column; align-items: center;">
+          <div class="img-zoom-wrapper" style="height: 180px; width: 100%; border-radius: 12px; margin-bottom: 16px;">
+            <img src="image/Live Food Counters (8).jpg" alt="Liquid Nitrogen Dessert Alchemy"
+              style="width:100%; height:100%; object-fit:cover;">
           </div>
-          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Nitrogen Dessert Alchemy</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px;">Flash-frozen Valrhona chocolate spheres, dragon breath meringues, and gold-dusted macarons made live.</p>
+          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Nitrogen Dessert
+            Alchemy</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px; text-align: center;">
+            Flash-frozen Valrhona chocolate spheres, dragon breath meringues, and gold-dusted macarons made live.</p>
           <span style="color: var(--gold-primary); font-weight: 700;">+$25 / guest</span>
         </div>
 
-        <div class="glow-gold-card tilt-card-3d" style="padding: 28px; text-align: left;">
-          <div class="img-zoom-wrapper" style="height: 180px; border-radius: 12px; margin-bottom: 16px;">
-            <img src="image/A.jpg" alt="Rare Single Malt Lounge">
+        <div class="glow-gold-card tilt-card-3d text-center"
+          style="padding: 28px; display: flex; flex-direction: column; align-items: center;">
+          <div class="img-zoom-wrapper" style="height: 180px; width: 100%; border-radius: 12px; margin-bottom: 16px;">
+            <img src="image/Corporate Catering (10)ss.jpg" alt="Rare Whiskey & Cigar Lounge"
+              style="width:100%; height:100%; object-fit:cover;">
           </div>
-          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Rare Whiskey & Cigar Lounge</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px;">30-year Macallan tastings paired with hand-rolled Dominican cigars in a private leather salon lounge.</p>
+          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Rare Whiskey & Cigar
+            Lounge</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px; text-align: center;">70-year
+            Macallan vintages paired with hand-rolled Dominican cigars in a protected outdoor salon lounge.</p>
           <span style="color: var(--gold-primary); font-weight: 700;">+$65 / guest</span>
         </div>
       </div>
@@ -285,17 +337,23 @@
           <div class="footer-col">
             <a href="index.html" class="logo-wrapper" style="margin-bottom: 16px;">
               <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-              <div class="logo-text">ROYAL <span>FEAST</span></div>
+              <div class="logo-text"><span>FEAST</span></div>
             </a>
             <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">
-              Setting the global 2026 gold standard in luxury catering, AI event management, and Michelin-caliber hospitality.
+              Setting the global 2026 gold standard in luxury catering, AI event management, and Michelin-caliber
+              hospitality.
             </p>
             <div class="footer-social-icons">
-              <a href="#" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="ri-instagram-line"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="ri-facebook-fill"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="Twitter" title="Twitter"><i class="ri-twitter-x-line"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="ri-youtube-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i
+                  class="ri-instagram-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i
+                  class="ri-facebook-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                  class="ri-linkedin-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Twitter" title="Twitter"><i
+                  class="ri-twitter-x-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i
+                  class="ri-youtube-line"></i></a>
             </div>
           </div>
 
@@ -335,7 +393,10 @@
 
         <div class="footer-bottom">
           <p>&copy; 2026 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
-          <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+            <a href="#top" class="back-to-top-btn" title="Back to Top"><i class="ri-arrow-up-line"></i> Top</a>
+          </div>
         </div>
       </div>
     </div>
@@ -344,4 +405,5 @@
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

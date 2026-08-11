@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <!-- Remix Icon CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
@@ -42,10 +42,10 @@
   <!-- Register Section -->
   <section class="hero-section text-center" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:40px 20px;">
     <div class="container">
-      <div class="glass-card" style="max-width:520px; margin:0 auto; padding:40px;">
+      <div class="glass-card" style="max-width:480px; margin:0 auto; padding:36px 32px; text-align:center;">
         <a href="index.html" class="logo-wrapper" style="display:inline-flex; margin-bottom:20px; text-decoration:none;">
           <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-          <div class="logo-text">ROYAL <span>FEAST</span></div>
+          <div class="logo-text"><span>FEAST</span></div>
         </a>
 
         <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:8px;">Create Client Account</h2>
@@ -69,20 +69,19 @@
 
           <div class="form-group" style="text-align:left;">
             <label>Create Password</label>
-            <input type="password" class="form-control" placeholder="••••••••••••" required>
+            <div class="password-input-wrapper">
+              <input type="password" class="form-control" placeholder="••••••••••••" required>
+              <i class="ri-eye-line password-toggle-icon" title="Toggle Password Visibility"></i>
+            </div>
           </div>
 
-          <button type="submit" class="btn-primary" style="width:100%; margin-top:10px;">
+          <button type="submit" class="btn-primary auth-btn-compact">
             Create Account & Launch Dashboard <i class="ri-rocket-line"></i>
           </button>
         </form>
 
         <div style="margin-top:24px; font-size:0.9rem; color:var(--text-muted);">
-          Already registered? <a href="login.html" style="color:var(--gold-primary);">Login Here</a>
-        </div>
-
-        <div style="margin-top:16px; font-size:0.85rem;">
-          <a href="index.html" style="color:var(--text-secondary); text-decoration:none;"><i class="ri-arrow-left-line"></i> Return to Main Website</a>
+          Already registered? <a href="login.html" class="auth-link" style="color:var(--gold-primary); font-weight:600;">Login Here</a>
         </div>
       </div>
     </div>

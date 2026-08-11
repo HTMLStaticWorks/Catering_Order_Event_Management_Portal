@@ -16,7 +16,7 @@
     rel="stylesheet">
 
   <!-- Remix Icon CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
@@ -41,7 +41,7 @@
     <div class="container navbar-container">
       <a href="index.html" class="logo-wrapper">
         <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-        <div class="logo-text">ROYAL <span>FEAST</span></div>
+        <div class="logo-text"><span>FEAST</span></div>
       </a>
 
       <!-- Desktop Nav Links (Hidden on <= 1024px) -->
@@ -98,43 +98,45 @@
   <!-- Mobile Off-Canvas Drawer (For <= 1024px) -->
   <div class="drawer-overlay"></div>
   <aside class="mobile-drawer">
+    <!-- Quick Tools & Actions (Theme, RTL, Login, Dashboard, Order Tracking) -->
+    <div class="drawer-tools">
+      <button class="drawer-tool-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <i class="ri-moon-line"></i>
+        <span>Theme</span>
+      </button>
+      <button class="drawer-tool-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+        <i class="ri-arrow-left-right-line"></i>
+        <span>RTL</span>
+      </button>
+      <a href="login.html" class="drawer-tool-btn" title="Client Login">
+        <i class="ri-user-3-line"></i>
+        <span>Login</span>
+      </a>
+      <a href="dashboard.html" class="drawer-tool-btn" title="Client Dashboard">
+        <i class="ri-dashboard-3-line"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="order-tracking.html" class="drawer-tool-btn" title="Track Live Order">
+        <i class="ri-radar-line"></i>
+        <span>Track Order</span>
+      </a>
+    </div>
+
     <div class="drawer-links">
       <div class="drawer-dropdown open">
         <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
         <div class="drawer-dropdown-menu">
-          <a href="index.html" class="drawer-link active"><i class="ri-home-4-line"></i> Home Version 01</a>
-          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home Version 02</a>
+          <a href="index.html" class="drawer-link active"><i class="ri-home-4-line"></i> Home 01</a>
+          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home 02</a>
         </div>
       </div>
-      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="about.html" class="drawer-link">About</a>
       <a href="services.html" class="drawer-link">Services</a>
-      <a href="menu.html" class="drawer-link">Culinary Menu</a>
-      <a href="event-types.html" class="drawer-link">Event Types</a>
-      <a href="packages.html" class="drawer-link">Packages & Pricing</a>
-      <a href="gallery.html" class="drawer-link">3D Gallery</a>
-      <a href="testimonials.html" class="drawer-link">Testimonials</a>
-      <a href="contact.html" class="drawer-link">Contact Us</a>
-      <a href="dashboard.html" class="drawer-link">AI Client Dashboard</a>
-      <a href="order-tracking.html" class="drawer-link">Live Order Tracking</a>
-      <a href="login.html" class="drawer-link">Login</a>
-      <a href="register.html" class="drawer-link">Register</a>
-    </div>
-
-    <div class="drawer-cta">
-      <a href="contact.html" class="btn-primary">Book Catering</a>
-      <a href="dashboard.html" class="btn-secondary">Get Instant Quote</a>
-    </div>
-
-    <div class="drawer-contact">
-      <p><i class="ri-whatsapp-line"></i> WhatsApp: <a href="https://wa.me/18005550199">+1 (800) 555-0199</a></p>
-      <p><i class="ri-phone-line"></i> Phone: +1 (800) ROYAL-FEAST</p>
-      <p><i class="ri-mail-line"></i> Email: concierge@royalfeast.com</p>
-      <div class="drawer-socials">
-        <a href="#"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-facebook-fill"></i></a>
-        <a href="#"><i class="ri-linkedin-fill"></i></a>
-        <a href="#"><i class="ri-youtube-line"></i></a>
-      </div>
+      <a href="menu.html" class="drawer-link">Menu</a>
+      <a href="event-types.html" class="drawer-link">Event</a>
+      <a href="packages.html" class="drawer-link">Packages</a>
+      <a href="gallery.html" class="drawer-link">Gallery</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
     </div>
   </aside>
 
@@ -177,6 +179,7 @@
             <select>
               <option>Luxury Wedding</option>
               <option>Corporate Gala</option>
+              <option>Diplomatic State Banquet</option>
               <option>VIP Private Dining</option>
               <option>Outdoor Festival</option>
             </select>
@@ -265,7 +268,7 @@
               class="ri-arrow-right-s-line"></i></a>
         </div>
 
-        <div class="glass-card service-card">
+        <div class="glass-card service-card" style="grid-column: 1 / -1; max-width:480px; width:100%; margin:0 auto;">
           <div class="service-icon-box"><i class="ri-vip-crown-line"></i></div>
           <h3 class="service-title">VIP Private Dining</h3>
           <p class="service-description">Ultra-exclusive personal chef assignments, rare wine pairings curated by
@@ -422,7 +425,7 @@
           <img src="image/Chefs at Work (10)sd.jpg" alt="Master Chef Table Preparation">
           <span class="floating-badge"><i class="ri-star-fill"></i> Michelin Level</span>
         </div>
-        <div class="glass-card" style="padding: 28px;">
+        <div class="glass-card chef-tasting-card" style="padding: 28px;">
           <h3 class="font-serif gold-gradient-text" style="font-size: 1.6rem; margin-bottom: 14px;">Live Omotesando Plating & Tasting</h3>
           <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 16px;">
             Our executive chefs construct bespoke tasting menus live in front of your guests. Featuring rare ingredients sourced globally within 24 hours of harvest.
@@ -451,12 +454,12 @@
           <div class="floating-badge">Farm-to-Table</div>
         </div>
         <div class="glass-card img-zoom-wrapper" style="height: 200px; padding: 0;">
-          <img src="image/Desserts & Bakery (8.jpgAW.jpg" alt="Artisanal Pastry">
-          <div class="floating-badge">Organic Cacao</div>
+          <img src="https://tse4.mm.bing.net/th/id/OIP.8VJI62Gc7-fDwAQ2G1AvtAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Exotic Spices & Oils">
+          <div class="floating-badge">Artisanal Oils</div>
         </div>
         <div class="glass-card img-zoom-wrapper" style="height: 200px; padding: 0;">
-          <img src="image/Corporate Catering (10)fewdfe.jpg" alt="Seafood Selection">
-          <div class="floating-badge">Wild-Caught</div>
+          <img src="image/Desserts & Bakery (8.jpgDWQ.jpg" alt="Pastry Artistry">
+          <div class="floating-badge">Master Pastry</div>
         </div>
         <div class="glass-card img-zoom-wrapper" style="height: 200px; padding: 0;">
           <img src="image/Event Decorations (8)S.jpg" alt="Botanical Pairing">
@@ -474,18 +477,18 @@
       <p class="section-subtitle">Immersive dining decor, floral artistry, and dynamic architectural illumination tailored to your banquet theme.</p>
 
       <div class="grid-2-col">
-        <div class="glass-card img-zoom-wrapper" style="height: 240px; padding: 0;">
+        <div class="glass-card img-zoom-wrapper" style="height: 260px; padding: 0;">
           <img src="image/Event Decorations (8).jpg" alt="Floral Atmosphere Decor">
-          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); text-align: left;">
-            <h3 class="font-serif gold-gradient-text" style="font-size: 1.25rem;">Royal Gala Floral Architecture</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Custom crystal chandeliers & exotic botanical styling.</p>
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 24px; background: linear-gradient(to top, rgba(10,10,14,0.95) 0%, rgba(10,10,14,0.7) 60%, transparent 100%); text-align: left;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 15px rgba(212,175,55,0.7); font-weight: 700; margin-bottom: 6px;">Royal Gala Floral Architecture</h3>
+            <p style="font-size: 0.88rem; color: #f4f4f5; text-shadow: 0 1px 4px rgba(0,0,0,0.9); font-weight: 400;">Custom crystal chandeliers & exotic botanical styling.</p>
           </div>
         </div>
-        <div class="glass-card img-zoom-wrapper" style="height: 240px; padding: 0;">
+        <div class="glass-card img-zoom-wrapper" style="height: 260px; padding: 0;">
           <img src="image/MEvent Decorations (8).jpg" alt="Ambient Banquet Lighting">
-          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); text-align: left;">
-            <h3 class="font-serif gold-gradient-text" style="font-size: 1.25rem;">Smart Ambient Illumination</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Color-synced smart lighting matching each dining course.</p>
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 24px; background: linear-gradient(to top, rgba(10,10,14,0.95) 0%, rgba(10,10,14,0.7) 60%, transparent 100%); text-align: left;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 15px rgba(212,175,55,0.7); font-weight: 700; margin-bottom: 6px;">Smart Ambient Illumination</h3>
+            <p style="font-size: 0.88rem; color: #f4f4f5; text-shadow: 0 1px 4px rgba(0,0,0,0.9); font-weight: 400;">Color-synced smart lighting matching each dining course.</p>
           </div>
         </div>
       </div>
@@ -518,7 +521,7 @@
           <div class="footer-col">
             <a href="index.html" class="logo-wrapper" style="margin-bottom: 16px;">
               <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-              <div class="logo-text">ROYAL <span>FEAST</span></div>
+              <div class="logo-text"><span>FEAST</span></div>
             </a>
             <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">
               Setting the global 2026 gold standard in luxury catering, AI event management, and Michelin-caliber hospitality.
@@ -568,7 +571,10 @@
 
         <div class="footer-bottom">
           <p>&copy; 2026 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
-          <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+            <a href="#top" class="back-to-top-btn" title="Back to Top"><i class="ri-arrow-up-line"></i> Top</a>
+          </div>
         </div>
       </div>
     </div>

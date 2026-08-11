@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <!-- Remix Icon CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
@@ -35,7 +35,7 @@
     <div class="container navbar-container">
       <a href="index.html" class="logo-wrapper">
         <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-        <div class="logo-text">ROYAL <span>FEAST</span></div>
+        <div class="logo-text"><span>FEAST</span></div>
       </a>
 
       <!-- Desktop Nav Links -->
@@ -92,35 +92,45 @@
   <!-- Mobile Off-Canvas Drawer -->
   <div class="drawer-overlay"></div>
   <aside class="mobile-drawer">
+    <!-- Quick Tools & Actions (Theme, RTL, Login, Dashboard, Order Tracking) -->
+    <div class="drawer-tools">
+      <button class="drawer-tool-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <i class="ri-moon-line"></i>
+        <span>Theme</span>
+      </button>
+      <button class="drawer-tool-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+        <i class="ri-arrow-left-right-line"></i>
+        <span>RTL</span>
+      </button>
+      <a href="login.html" class="drawer-tool-btn" title="Client Login">
+        <i class="ri-user-3-line"></i>
+        <span>Login</span>
+      </a>
+      <a href="dashboard.html" class="drawer-tool-btn" title="Client Dashboard">
+        <i class="ri-dashboard-3-line"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="order-tracking.html" class="drawer-tool-btn" title="Track Live Order">
+        <i class="ri-radar-line"></i>
+        <span>Track Order</span>
+      </a>
+    </div>
+
     <div class="drawer-links">
       <div class="drawer-dropdown open">
         <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
         <div class="drawer-dropdown-menu">
-          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home Version 01</a>
-          <a href="home-2.html" class="drawer-link active"><i class="ri-home-gear-line"></i> Home Version 02</a>
+          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home 01</a>
+          <a href="home-2.html" class="drawer-link active"><i class="ri-home-gear-line"></i> Home 02</a>
         </div>
       </div>
-      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="about.html" class="drawer-link">About</a>
       <a href="services.html" class="drawer-link">Services</a>
-      <a href="menu.html" class="drawer-link">Culinary Menu</a>
-      <a href="event-types.html" class="drawer-link">Event Types</a>
-      <a href="packages.html" class="drawer-link">Packages & Pricing</a>
-      <a href="gallery.html" class="drawer-link">3D Gallery</a>
-      <a href="testimonials.html" class="drawer-link">Testimonials</a>
-      <a href="contact.html" class="drawer-link">Contact Us</a>
-      <a href="dashboard.html" class="drawer-link">AI Client Dashboard</a>
-      <a href="order-tracking.html" class="drawer-link">Live Order Tracking</a>
-      <a href="login.html" class="drawer-link">Login</a>
-      <a href="register.html" class="drawer-link">Register</a>
-    </div>
-    <div class="drawer-cta">
-      <a href="contact.html" class="btn-primary">Book Catering</a>
-      <a href="dashboard.html" class="btn-secondary">Get Instant Quote</a>
-    </div>
-    <div class="drawer-contact">
-      <p><i class="ri-whatsapp-line"></i> WhatsApp: +1 (800) 555-0199</p>
-      <p><i class="ri-phone-line"></i> Phone: +1 (800) ROYAL-FEAST</p>
-      <p><i class="ri-mail-line"></i> Email: concierge@royalfeast.com</p>
+      <a href="menu.html" class="drawer-link">Menu</a>
+      <a href="event-types.html" class="drawer-link">Event</a>
+      <a href="packages.html" class="drawer-link">Packages</a>
+      <a href="gallery.html" class="drawer-link">Gallery</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
     </div>
   </aside>
 
@@ -154,26 +164,33 @@
       <h2 class="section-title">AI-Powered <span class="gold-gradient-text">Event Suite</span></h2>
       <p class="section-subtitle">Experience our proprietary event design system that predicts dietary requirements, calculates budget tiers, and assigns culinary talent automatically.</p>
 
-      <div class="dash-grid" style="margin-top:40px;">
-        <div class="glass-card" style="padding:32px; text-align:left;">
-          <div class="service-icon-box" style="margin-bottom:16px;"><i class="ri-sound-wave-line"></i></div>
-          <h3 class="font-serif gold-gradient-text" style="font-size:1.3rem; margin-bottom:10px;">Smart Menu Matching</h3>
-          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">AI analyzes attendee demographics, cultural preferences, and seasonal harvests to generate bespoke 5-course pairings.</p>
-          <a href="dashboard.html" class="service-link">Try Menu Matcher <i class="ri-arrow-right-line"></i></a>
+      <div class="grid-4-col" style="margin-top:40px;">
+        <div class="glass-card" style="padding:30px 24px; text-align:center; display:flex; flex-direction:column; align-items:center;">
+          <div class="service-icon-box" style="margin:0 auto 16px auto;"><i class="ri-restaurant-2-line"></i></div>
+          <h3 class="font-serif gold-gradient-text" style="font-size:1.25rem; margin-bottom:10px;">Smart Menu Matching</h3>
+          <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:18px;">AI analyzes attendee demographics, cultural preferences, and seasonal harvests to generate bespoke 5-course pairings.</p>
+          <a href="dashboard.html" class="service-link" style="margin:auto auto 0 auto;">Try Menu Matcher <i class="ri-arrow-right-line"></i></a>
         </div>
 
-        <div class="glass-card" style="padding:32px; text-align:left;">
-          <div class="service-icon-box" style="margin-bottom:16px;"><i class="ri-calculator-line"></i></div>
-          <h3 class="font-serif gold-gradient-text" style="font-size:1.3rem; margin-bottom:10px;">Dynamic Budget Optimizer</h3>
-          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Instantaneous cost scaling based on guest counts, wine vintages, table decor, and service staff ratio requirements.</p>
-          <a href="dashboard.html" class="service-link">Calculate Budget <i class="ri-arrow-right-line"></i></a>
+        <div class="glass-card" style="padding:30px 24px; text-align:center; display:flex; flex-direction:column; align-items:center;">
+          <div class="service-icon-box" style="margin:0 auto 16px auto;"><i class="ri-calculator-line"></i></div>
+          <h3 class="font-serif gold-gradient-text" style="font-size:1.25rem; margin-bottom:10px;">Dynamic Budget Optimizer</h3>
+          <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:18px;">Instantaneous cost scaling based on guest counts, wine vintages, table decor, and service staff ratio requirements.</p>
+          <a href="dashboard.html" class="service-link" style="margin:auto auto 0 auto;">Calculate Budget <i class="ri-arrow-right-line"></i></a>
         </div>
 
-        <div class="glass-card" style="padding:32px; text-align:left;">
-          <div class="service-icon-box" style="margin-bottom:16px;"><i class="ri-truck-line"></i></div>
-          <h3 class="font-serif gold-gradient-text" style="font-size:1.3rem; margin-bottom:10px;">GPS Fleet Telemetry</h3>
-          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Track temperature-controlled delivery vans in real time with live ETA updates and automated venue arrival alerts.</p>
-          <a href="order-tracking.html" class="service-link">Track Delivery Fleet <i class="ri-arrow-right-line"></i></a>
+        <div class="glass-card" style="padding:30px 24px; text-align:center; display:flex; flex-direction:column; align-items:center;">
+          <div class="service-icon-box" style="margin:0 auto 16px auto;"><i class="ri-truck-line"></i></div>
+          <h3 class="font-serif gold-gradient-text" style="font-size:1.25rem; margin-bottom:10px;">GPS Fleet Telemetry</h3>
+          <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:18px;">Track temperature-controlled delivery vans in real time with live ETA updates and automated venue arrival alerts.</p>
+          <a href="order-tracking.html" class="service-link" style="margin:auto auto 0 auto;">Track Delivery Fleet <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="glass-card" style="padding:30px 24px; text-align:center; display:flex; flex-direction:column; align-items:center;">
+          <div class="service-icon-box" style="margin:0 auto 16px auto;"><i class="ri-box-3-line"></i></div>
+          <h3 class="font-serif gold-gradient-text" style="font-size:1.25rem; margin-bottom:10px;">3D Atmosphere Planner</h3>
+          <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:18px;">Simulate lighting temperatures, banquet table acoustics, and floral arrangement depths in interactive 3D.</p>
+          <a href="gallery.html" class="service-link" style="margin:auto auto 0 auto;">Launch 3D Planner <i class="ri-arrow-right-line"></i></a>
         </div>
       </div>
     </div>
@@ -182,7 +199,7 @@
   <!-- VIP Dining Spotlight Section -->
   <section class="py-section" style="background: rgba(255,255,255,0.01);">
     <div class="container">
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:40px; align-items:center;">
+      <div class="grid-2-col michelin-mastery-grid" style="align-items:center;">
         <div>
           <div class="section-tag"><i class="ri-goblet-line"></i> Michelin Mastery</div>
           <h2 class="section-title">The Art of <span class="gold-gradient-text">Ultra-VIP Dining</span></h2>
@@ -214,7 +231,7 @@
       <div class="grid-2-col" style="align-items:center;">
         <div class="glow-gold-card tilt-card-3d" style="padding: 20px;">
           <div class="img-zoom-wrapper" style="height: 200px; border-radius: 12px; margin-bottom: 16px;">
-            <img src="image/Corporate Catering (10)ss.jpg" alt="Diplomatic Summit Reception">
+            <img src="https://images.stockcake.com/public/7/a/9/7a9ddb8a-c739-4a1c-b190-9d48f6dd03f4_large/global-leaders-summit-stockcake.jpg" alt="Diplomatic State Banquets">
           </div>
           <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Summit Leadership Banquets</h3>
           <p style="color: var(--text-secondary); font-size: 0.88rem;">
@@ -282,7 +299,7 @@
           <img src="image/Wedding Catering (10)w.jpg" alt="Private Butler Service">
           <div class="floating-badge"><i class="ri-shield-star-line"></i> VIP Butler Certified</div>
         </div>
-        <div class="glass-card" style="padding: 28px;">
+        <div class="glass-card chef-tasting-card" style="padding: 28px;">
           <h3 class="font-serif gold-gradient-text" style="font-size: 1.6rem; margin-bottom: 14px;">Discreet VIP Concierge & Plating</h3>
           <p style="color: var(--text-secondary); font-size:0.92rem; margin-bottom: 16px;">
             Each VIP table is assigned a personal sommelier and lead butler. From imperial caviar service on mother-of-pearl spoons to rare vintage decanting.
@@ -306,7 +323,7 @@
           <div class="footer-col">
             <a href="index.html" class="logo-wrapper" style="margin-bottom: 16px;">
               <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-              <div class="logo-text">ROYAL <span>FEAST</span></div>
+              <div class="logo-text"><span>FEAST</span></div>
             </a>
             <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">
               Setting the global 2026 gold standard in luxury catering, AI event management, and Michelin-caliber hospitality.
@@ -356,7 +373,10 @@
 
         <div class="footer-bottom">
           <p>&copy; 2026 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
-          <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+            <a href="#top" class="back-to-top-btn" title="Back to Top"><i class="ri-arrow-up-line"></i> Top</a>
+          </div>
         </div>
       </div>
     </div>

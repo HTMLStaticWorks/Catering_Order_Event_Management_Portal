@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <!-- Remix Icon CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
@@ -34,7 +34,7 @@
     <div class="container navbar-container">
       <a href="index.html" class="logo-wrapper">
         <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-        <div class="logo-text">ROYAL <span>FEAST</span></div>
+        <div class="logo-text"><span>FEAST</span></div>
       </a>
 
       <nav class="nav-links">
@@ -88,24 +88,45 @@
   <!-- Mobile Drawer -->
   <div class="drawer-overlay"></div>
   <aside class="mobile-drawer">
+    <!-- Quick Tools & Actions (Theme, RTL, Login, Dashboard, Order Tracking) -->
+    <div class="drawer-tools">
+      <button class="drawer-tool-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <i class="ri-moon-line"></i>
+        <span>Theme</span>
+      </button>
+      <button class="drawer-tool-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+        <i class="ri-arrow-left-right-line"></i>
+        <span>RTL</span>
+      </button>
+      <a href="login.html" class="drawer-tool-btn" title="Client Login">
+        <i class="ri-user-3-line"></i>
+        <span>Login</span>
+      </a>
+      <a href="dashboard.html" class="drawer-tool-btn" title="Client Dashboard">
+        <i class="ri-dashboard-3-line"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="order-tracking.html" class="drawer-tool-btn active" title="Track Live Order">
+        <i class="ri-radar-line"></i>
+        <span>Track Order</span>
+      </a>
+    </div>
+
     <div class="drawer-links">
       <div class="drawer-dropdown">
         <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
         <div class="drawer-dropdown-menu">
-          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home Version 01</a>
-          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home Version 02</a>
+          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home 01</a>
+          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home 02</a>
         </div>
       </div>
-      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="about.html" class="drawer-link">About</a>
       <a href="services.html" class="drawer-link">Services</a>
-      <a href="menu.html" class="drawer-link">Culinary Menu</a>
-      <a href="event-types.html" class="drawer-link">Event Types</a>
-      <a href="packages.html" class="drawer-link">Packages & Pricing</a>
-      <a href="gallery.html" class="drawer-link">3D Gallery</a>
-      <a href="testimonials.html" class="drawer-link">Testimonials</a>
-      <a href="contact.html" class="drawer-link">Contact Us</a>
-      <a href="dashboard.html" class="drawer-link">AI Client Dashboard</a>
-      <a href="order-tracking.html" class="drawer-link active">Live Order Tracking</a>
+      <a href="menu.html" class="drawer-link">Menu</a>
+      <a href="event-types.html" class="drawer-link">Event</a>
+      <a href="packages.html" class="drawer-link">Packages</a>
+      <a href="gallery.html" class="drawer-link">Gallery</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
     </div>
   </aside>
 
@@ -258,7 +279,7 @@
           <div class="footer-col">
             <a href="index.html" class="logo-wrapper" style="margin-bottom: 16px;">
               <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-              <div class="logo-text">ROYAL <span>FEAST</span></div>
+              <div class="logo-text"><span>FEAST</span></div>
             </a>
             <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">
               Setting the global 2026 gold standard in luxury catering, AI event management, and Michelin-caliber hospitality.
@@ -308,7 +329,10 @@
 
         <div class="footer-bottom">
           <p>&copy; 2026 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
-          <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+            <a href="#top" class="back-to-top-btn" title="Back to Top"><i class="ri-arrow-up-line"></i> Top</a>
+          </div>
         </div>
       </div>
     </div>

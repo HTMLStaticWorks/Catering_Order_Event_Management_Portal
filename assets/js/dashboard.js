@@ -70,6 +70,13 @@ function initAiPlanner() {
       decor: "Handcrafted Ceramics, Custom Engraved Menus & Silk Napkins",
       estCost: "$180 / guest"
     },
+    diplomatic: {
+      title: "Diplomatic State Banquet & Summit",
+      courses: "Protocol-Compliant 6-Course State Dinner with Encrypted Dietary Routing",
+      pairings: "Rare Vintage Presidential Reserve Wines & Artisanal Water Selection",
+      decor: "High-Security Protocol Table Setting, Gold Embossed Menus & Velvet Canopies",
+      estCost: "$220 / guest"
+    },
     birthday: {
       title: "Luxury Celebration & Dessert Extravaganza",
       courses: "Live Gourmet Grill & 10-Tier Artisanal Dessert Tower",
@@ -204,10 +211,10 @@ function initSupportChat() {
 }
 
 /* --------------------------------------------------------------------------
-   6. DASHBOARD SIDEBAR NAVIGATION TABS
+   6. DASHBOARD SIDEBAR & MOBILE DRAWER NAVIGATION TABS
    -------------------------------------------------------------------------- */
 function initDashboardTabs() {
-  const dashNavItems = document.querySelectorAll('.dash-nav-item');
+  const dashNavItems = document.querySelectorAll('.dash-nav-item[data-target]');
   const dashSections = document.querySelectorAll('.dash-section-pane');
 
   if (!dashNavItems.length || !dashSections.length) return;
@@ -218,9 +225,16 @@ function initDashboardTabs() {
       const targetId = item.getAttribute('data-target');
       if (!targetId) return;
 
-      dashNavItems.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
+      // Sync active state across sidebar slider and mobile drawer
+      dashNavItems.forEach(i => {
+        if (i.getAttribute('data-target') === targetId) {
+          i.classList.add('active');
+        } else {
+          i.classList.remove('active');
+        }
+      });
 
+      // Switch pane view
       dashSections.forEach(sec => {
         if (sec.id === targetId) {
           sec.style.display = 'block';
@@ -228,6 +242,17 @@ function initDashboardTabs() {
           sec.style.display = 'none';
         }
       });
+
+      // Auto-close mobile drawer if open
+      const drawer = document.querySelector('.mobile-drawer');
+      const overlay = document.querySelector('.drawer-overlay');
+      const hamburger = document.querySelector('.hamburger-toggle');
+      if (drawer && drawer.classList.contains('open')) {
+        drawer.classList.remove('open');
+        overlay?.classList.remove('active');
+        hamburger?.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
   });
 }

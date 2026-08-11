@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <!-- Remix Icon CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
@@ -42,10 +42,10 @@
   <!-- Login Section -->
   <section class="hero-section text-center" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:40px 20px;">
     <div class="container">
-      <div class="glass-card" style="max-width:480px; margin:0 auto; padding:40px;">
+      <div class="glass-card" style="max-width:440px; margin:0 auto; padding:36px 32px; text-align:center;">
         <a href="index.html" class="logo-wrapper" style="display:inline-flex; margin-bottom:20px; text-decoration:none;">
           <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-          <div class="logo-text">ROYAL <span>FEAST</span></div>
+          <div class="logo-text"><span>FEAST</span></div>
         </a>
         
         <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:8px;">Client Portal Login</h2>
@@ -59,27 +59,26 @@
 
           <div class="form-group" style="text-align:left;">
             <label>Password</label>
-            <input type="password" class="form-control" value="••••••••••••" required>
+            <div class="password-input-wrapper">
+              <input type="password" class="form-control" value="••••••••••••" required>
+              <i class="ri-eye-line password-toggle-icon" title="Toggle Password Visibility"></i>
+            </div>
           </div>
 
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:0.85rem;">
             <label style="display:flex; align-items:center; gap:6px; cursor:pointer; color:var(--text-secondary);">
               <input type="checkbox" checked style="accent-color:var(--gold-primary);"> Remember Me
             </label>
-            <a href="#" style="color:var(--gold-light);">Forgot Password?</a>
+            <a href="#" class="auth-link" style="color:var(--gold-light);">Forgot Password?</a>
           </div>
 
-          <button type="submit" class="btn-primary" style="width:100%;">
+          <button type="submit" class="btn-primary auth-btn-compact">
             Login to Dashboard <i class="ri-arrow-right-line"></i>
           </button>
         </form>
 
         <div style="margin-top:24px; font-size:0.9rem; color:var(--text-muted);">
-          Don't have an event portal account? <a href="register.html" style="color:var(--gold-primary);">Register Now</a>
-        </div>
-        
-        <div style="margin-top:16px; font-size:0.85rem;">
-          <a href="index.html" style="color:var(--text-secondary); text-decoration:none;"><i class="ri-arrow-left-line"></i> Return to Main Website</a>
+          Don't have an event portal account? <a href="register.html" class="auth-link" style="color:var(--gold-primary); font-weight:600;">Register Now</a>
         </div>
       </div>
     </div>

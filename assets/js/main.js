@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounterAnimations();
   initCustomMagneticCursor();
   initSparkleClickParticles();
+  initPasswordToggles();
 });
 
 /* --------------------------------------------------------------------------
@@ -24,7 +25,7 @@ function initNavbarAndDrawer() {
   const hamburger = document.querySelector('.hamburger-toggle');
   const drawer = document.querySelector('.mobile-drawer');
   const overlay = document.querySelector('.drawer-overlay');
-  const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-cta a');
+  const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-cta a, .drawer-tools a');
 
   // Scroll effect
   window.addEventListener('scroll', () => {
@@ -61,6 +62,35 @@ function initNavbarAndDrawer() {
       e.stopPropagation();
       const parent = btn.closest('.drawer-dropdown');
       parent?.classList.toggle('open');
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   1B. THEME & RTL TOGGLE ENGINE
+   -------------------------------------------------------------------------- */
+function initThemeAndRtl() {
+  const themeBtns = document.querySelectorAll('.theme-toggle-btn');
+  const rtlBtns = document.querySelectorAll('.rtl-toggle-btn');
+
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      themeBtns.forEach(b => {
+        const icon = b.querySelector('i');
+        if (icon) icon.className = isLight ? 'ri-sun-line' : 'ri-moon-line';
+      });
+    });
+  });
+
+  rtlBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+      const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+      document.documentElement.setAttribute('dir', newDir);
     });
   });
 }
@@ -480,6 +510,29 @@ function initSparkleClickParticles() {
         easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
       }).onfinish = () => sparkle.remove();
     }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   14. PASSWORD VISIBILITY TOGGLE (EYE ICON)
+   -------------------------------------------------------------------------- */
+function initPasswordToggles() {
+  const toggleIcons = document.querySelectorAll('.password-toggle-icon');
+  toggleIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      const wrapper = icon.closest('.password-input-wrapper');
+      const input = wrapper ? wrapper.querySelector('input') : null;
+      if (!input) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('ri-eye-line');
+        icon.classList.add('ri-eye-off-line');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('ri-eye-off-line');
+        icon.classList.add('ri-eye-line');
+      }
+    });
   });
 }
 

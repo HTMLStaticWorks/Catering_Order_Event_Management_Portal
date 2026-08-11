@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Types | Royal Feast Events - Tailored Hospitality Celebrations</title>
-  <meta name="description" content="Discover event-specific catering solutions for Weddings, Corporate Galas, Private VIP Dinners, Birthday Parties, and Festivals.">
+  <meta name="description"
+    content="Discover event-specific catering solutions for Weddings, Corporate Galas, Private VIP Dinners, Birthday Parties, and Festivals.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- Remix Icon CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
@@ -21,6 +25,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 
   <div class="bg-aurora-wrapper">
@@ -34,7 +39,7 @@
     <div class="container navbar-container">
       <a href="index.html" class="logo-wrapper">
         <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-        <div class="logo-text">ROYAL <span>FEAST</span></div>
+        <div class="logo-text"><span>FEAST</span></div>
       </a>
 
       <nav class="nav-links">
@@ -88,30 +93,45 @@
   <!-- Mobile Drawer -->
   <div class="drawer-overlay"></div>
   <aside class="mobile-drawer">
+    <!-- Quick Tools & Actions (Theme, RTL, Login, Dashboard, Order Tracking) -->
+    <div class="drawer-tools">
+      <button class="drawer-tool-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <i class="ri-moon-line"></i>
+        <span>Theme</span>
+      </button>
+      <button class="drawer-tool-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
+        <i class="ri-arrow-left-right-line"></i>
+        <span>RTL</span>
+      </button>
+      <a href="login.html" class="drawer-tool-btn" title="Client Login">
+        <i class="ri-user-3-line"></i>
+        <span>Login</span>
+      </a>
+      <a href="dashboard.html" class="drawer-tool-btn" title="Client Dashboard">
+        <i class="ri-dashboard-3-line"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="order-tracking.html" class="drawer-tool-btn" title="Track Live Order">
+        <i class="ri-radar-line"></i>
+        <span>Track Order</span>
+      </a>
+    </div>
+
     <div class="drawer-links">
       <div class="drawer-dropdown">
         <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
         <div class="drawer-dropdown-menu">
-          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home Version 01</a>
-          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home Version 02</a>
+          <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home 01</a>
+          <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home 02</a>
         </div>
       </div>
-      <a href="about.html" class="drawer-link">About Us</a>
+      <a href="about.html" class="drawer-link">About</a>
       <a href="services.html" class="drawer-link">Services</a>
-      <a href="menu.html" class="drawer-link">Culinary Menu</a>
-      <a href="event-types.html" class="drawer-link active">Event Types</a>
-      <a href="packages.html" class="drawer-link">Packages & Pricing</a>
-      <a href="gallery.html" class="drawer-link">3D Gallery</a>
-      <a href="testimonials.html" class="drawer-link">Testimonials</a>
-      <a href="contact.html" class="drawer-link">Contact Us</a>
-      <a href="dashboard.html" class="drawer-link">AI Client Dashboard</a>
-      <a href="order-tracking.html" class="drawer-link">Live Order Tracking</a>
-      <a href="login.html" class="drawer-link">Login</a>
-      <a href="register.html" class="drawer-link">Register</a>
-    </div>
-    <div class="drawer-cta">
-      <a href="contact.html" class="btn-primary">Book Catering</a>
-      <a href="dashboard.html" class="btn-secondary">Get Instant Quote</a>
+      <a href="menu.html" class="drawer-link">Menu</a>
+      <a href="event-types.html" class="drawer-link active">Event</a>
+      <a href="packages.html" class="drawer-link">Packages</a>
+      <a href="gallery.html" class="drawer-link">Gallery</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
     </div>
   </aside>
 
@@ -122,7 +142,8 @@
     <div class="container hero-content">
       <div class="section-tag"><i class="ri-calendar-event-line"></i> Tailored Celebrations</div>
       <h1 class="section-title">Specialized <span class="gold-gradient-text">Event Types</span></h1>
-      <p class="section-subtitle">Customized culinary logistics, ambient theme styling, and menu engineering for every occasion.</p>
+      <p class="section-subtitle">Customized culinary logistics, ambient theme styling, and menu engineering for every
+        occasion.</p>
     </div>
   </section>
 
@@ -133,41 +154,82 @@
 
         <!-- 1. Weddings -->
         <div class="glass-card" style="padding:0; overflow:hidden;">
-          <img src="image/Wedding Catering (10)w.jpg" alt="Regal Weddings" style="width:100%; height:220px; object-fit:cover;">
+          <img src="image/Wedding Catering (10)w.jpg" alt="Regal Weddings"
+            style="width:100%; height:220px; object-fit:cover;">
           <div style="padding:28px;" class="text-center">
             <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">Regal Weddings</h3>
-            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">From palace ballrooms to beachside ceremonies, our wedding team curates flower petal reveals, champagne towers, and wedding cake artistry.</p>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">From palace ballrooms to
+              beachside ceremonies, our wedding team curates flower petal reveals, champagne towers.</p>
             <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan Wedding</a>
           </div>
         </div>
 
         <!-- 2. Corporate Galas -->
         <div class="glass-card" style="padding:0; overflow:hidden;">
-          <img src="image/Corporate Catering (10)ss.jpg" alt="Corporate Galas" style="width:100%; height:220px; object-fit:cover;">
+          <img src="image/Corporate Catering (10)ss.jpg" alt="Corporate Galas"
+            style="width:100%; height:220px; object-fit:cover;">
           <div style="padding:28px;" class="text-center">
             <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">Corporate Galas</h3>
-            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Precision timing for executive summits, awards banquets, product reveals, and high-level networking luncheons.</p>
-            <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan Corporate Gala</a>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Precision timing for executive
+              summits, awards banquets, product reveals, and high-level networking luncheons.</p>
+            <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan Corporate
+              Gala</a>
           </div>
         </div>
 
         <!-- 3. VIP Private Soirees -->
         <div class="glass-card" style="padding:0; overflow:hidden;">
-          <img src="image/Buffet Setup (10)dw.jpg" alt="VIP Private Soirees" style="width:100%; height:220px; object-fit:cover;">
+          <img src="image/Buffet Setup (10)dw.jpg" alt="VIP Private Soirees"
+            style="width:100%; height:220px; object-fit:cover;">
           <div style="padding:28px;" class="text-center">
-            <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">VIP Private Soirees</h3>
-            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Ultra-exclusive private home takeovers with Michelin chefs, sommelier pairing, and custom engraved menus.</p>
-            <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan VIP Event</a>
+            <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">VIP Private Soirees
+            </h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Ultra-exclusive private home
+              takeovers with Michelin chefs, sommelier pairing, and custom engraved menus.</p>
+            <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan VIP
+              Event</a>
           </div>
         </div>
 
         <!-- 4. Outdoor Festivals -->
         <div class="glass-card" style="padding:0; overflow:hidden;">
-          <img src="image/Live Food Counters (8).jpg" alt="Outdoor Festivals" style="width:100%; height:220px; object-fit:cover;">
+          <img src="image/Live Food Counters (8).jpg" alt="Outdoor Festivals"
+            style="width:100%; height:220px; object-fit:cover;">
           <div style="padding:28px;" class="text-center">
-            <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">Outdoor Festivals</h3>
-            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Mobile culinary infrastructure capable of serving 2,000+ festival guests with high-end live food counters.</p>
+            <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">Outdoor Festivals
+            </h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Mobile culinary infrastructure
+              capable of serving 2,000+ festival guests with high-end live food counters.</p>
             <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan Festival</a>
+          </div>
+        </div>
+
+        <!-- 5. Diplomatic Summits -->
+        <div class="glass-card" style="padding:0; overflow:hidden;">
+          <img
+            src="https://images.stockcake.com/public/7/a/9/7a9ddb8a-c739-4a1c-b190-9d48f6dd03f4_large/global-leaders-summit-stockcake.jpg"
+            alt="Diplomatic State Banquets" style="width:100%; height:220px; object-fit:cover;">
+          <div style="padding:28px;" class="text-center">
+            <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">Diplomatic State
+              Banquets</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Protocol-compliant
+              high-security banquets for world leaders, international summits, and diplomatic envoys.</p>
+            <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan State
+              Banquet</a>
+          </div>
+        </div>
+
+        <!-- 6. Superyacht & Private Island Galas -->
+        <div class="glass-card" style="padding:0; overflow:hidden;">
+          <img src="image/Buffet Setup (10)w.jpg" alt="Superyacht Galas"
+            style="width:100%; height:220px; object-fit:cover;">
+          <div style="padding:28px;" class="text-center">
+            <h3 class="font-serif gold-gradient-text" style="font-size:1.4rem; margin-bottom:10px;">Superyacht & Island
+              Galas</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:16px;">Offshore tender boat logistics
+              delivering fresh sea urchin, caviar bars, and live sushi stations to private yachts.</p>
+            <a href="dashboard.html" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Plan Yacht
+              Gala</a>
           </div>
         </div>
 
@@ -180,7 +242,8 @@
     <div class="container text-center">
       <span class="section-tag"><i class="ri-heart-3-line"></i> Destination Elegance</span>
       <h2 class="section-title">Destination Weddings & <span class="gold-gradient-text">Castle Galas</span></h2>
-      <p class="section-subtitle">Transforming historic French châteaux, Italian villas, and private Caribbean islands into fairy-tale culinary sanctuaries.</p>
+      <p class="section-subtitle">Transforming historic French châteaux, Italian villas, and private Caribbean islands
+        into fairy-tale culinary sanctuaries.</p>
 
       <div class="grid-2-col" style="align-items: center; text-align: left;">
         <div class="glass-card img-zoom-wrapper" style="height: 300px; padding: 0;">
@@ -188,18 +251,25 @@
           <div class="floating-badge"><i class="ri-map-pin-line"></i> International Destination</div>
         </div>
 
-        <div class="glass-card" style="padding: 28px;">
-          <h3 class="font-serif gold-gradient-text" style="font-size: 1.6rem; margin-bottom: 14px;">Global Wedding Logistics Squad</h3>
+        <div class="glass-card chef-tasting-card" style="padding: 28px;">
+          <h3 class="font-serif gold-gradient-text" style="font-size: 1.6rem; margin-bottom: 14px;">Global Wedding
+            Logistics Squad</h3>
           <p style="color: var(--text-secondary); font-size:0.92rem; margin-bottom: 16px;">
-            Our mobile culinary strike team dispatches ahead of your guests, securing local fresh produce, custom crystal glassware, and setting up atmospheric floral dining canopies.
+            Our mobile culinary strike team dispatches ahead of your guests, securing local fresh produce, custom
+            crystal glassware, and setting up atmospheric floral dining canopies.
           </p>
 
-          <ul style="display: flex; flex-direction: column; gap: 10px; color: var(--text-primary); margin-bottom: 20px; font-size:0.9rem;">
-            <li><i class="ri-checkbox-circle-fill" style="color:var(--gold-primary);"></i> Multi-Day Wedding Weekend Menu Planning</li>
-            <li><i class="ri-checkbox-circle-fill" style="color:var(--gold-primary);"></i> Midnight Truffle & Champagne After-Party Bars</li>
-            <li><i class="ri-checkbox-circle-fill" style="color:var(--gold-primary);"></i> Personalized Guest Dietary Cards in 8 Languages</li>
+          <ul
+            style="display: flex; flex-direction: column; gap: 10px; color: var(--text-primary); margin-bottom: 20px; font-size:0.9rem;">
+            <li><i class="ri-checkbox-circle-fill" style="color:var(--gold-primary);"></i> Multi-Day Wedding Weekend
+              Menu Planning</li>
+            <li><i class="ri-checkbox-circle-fill" style="color:var(--gold-primary);"></i> Midnight Truffle & Champagne
+              After-Party Bars</li>
+            <li><i class="ri-checkbox-circle-fill" style="color:var(--gold-primary);"></i> Personalized Guest Dietary
+              Cards in 8 Languages</li>
           </ul>
-          <a href="contact.html" class="btn-primary" style="padding: 10px 24px; font-size:0.88rem;"><i class="ri-heart-line"></i> Inquire Destination Weddings</a>
+          <a href="contact.html" class="btn-primary" style="padding: 10px 24px; font-size:0.88rem;"><i
+              class="ri-heart-line"></i> Inquire Destination Weddings</a>
         </div>
       </div>
     </div>
@@ -210,23 +280,28 @@
     <div class="container text-center">
       <span class="section-tag"><i class="ri-plane-line"></i> High-Altitude Luxury</span>
       <h2 class="section-title">Private Jet & <span class="gold-gradient-text">Superyacht Culinary Fleet</span></h2>
-      <p class="section-subtitle">Discreet, security-vetted catering delivered directly to private airport tarmac or offshore megayachts.</p>
+      <p class="section-subtitle">Discreet, security-vetted catering delivered directly to private airport tarmac or
+        offshore megayachts.</p>
 
       <div class="grid-2-col">
         <div class="glow-gold-card tilt-card-3d" style="padding: 28px; text-align: left;">
           <div class="img-zoom-wrapper" style="height: 220px; border-radius: 12px; margin-bottom: 16px;">
             <img src="image/Corporate Catering (10)fd.jpg" alt="In-Flight Jet Catering">
           </div>
-          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Private Aviation Dining</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem;">Tarmac delivery of vacuum-sealed gourmet course meals customized for high-altitude flavor perception.</p>
+          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Private Aviation
+            Dining</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">Tarmac delivery of vacuum-sealed gourmet course
+            meals customized for high-altitude flavor perception.</p>
         </div>
 
         <div class="glow-gold-card tilt-card-3d" style="padding: 28px; text-align: left;">
           <div class="img-zoom-wrapper" style="height: 220px; border-radius: 12px; margin-bottom: 16px;">
             <img src="image/D.jpg" alt="Superyacht Galley Catering">
           </div>
-          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Offshore Superyacht Service</h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem;">Tender boat supply drops of fresh seafood, ice sculptures, and live sushi chefs for yacht charters.</p>
+          <h3 class="font-serif gold-gradient-text" style="font-size: 1.3rem; margin-bottom: 8px;">Offshore Superyacht
+            Service</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">Tender boat supply drops of fresh seafood, ice
+            sculptures, and live sushi chefs for yacht charters.</p>
         </div>
       </div>
     </div>
@@ -240,17 +315,23 @@
           <div class="footer-col">
             <a href="index.html" class="logo-wrapper" style="margin-bottom: 16px;">
               <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-              <div class="logo-text">ROYAL <span>FEAST</span></div>
+              <div class="logo-text"><span>FEAST</span></div>
             </a>
             <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px; line-height: 1.6;">
-              Setting the global 2026 gold standard in luxury catering, AI event management, and Michelin-caliber hospitality.
+              Setting the global 2026 gold standard in luxury catering, AI event management, and Michelin-caliber
+              hospitality.
             </p>
             <div class="footer-social-icons">
-              <a href="#" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="ri-instagram-line"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="ri-facebook-fill"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="Twitter" title="Twitter"><i class="ri-twitter-x-line"></i></a>
-              <a href="#" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="ri-youtube-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i
+                  class="ri-instagram-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i
+                  class="ri-facebook-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                  class="ri-linkedin-fill"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="Twitter" title="Twitter"><i
+                  class="ri-twitter-x-line"></i></a>
+              <a href="#" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i
+                  class="ri-youtube-line"></i></a>
             </div>
           </div>
 
@@ -290,7 +371,10 @@
 
         <div class="footer-bottom">
           <p>&copy; 2026 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
-          <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
+            <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
+            <a href="#top" class="back-to-top-btn" title="Back to Top"><i class="ri-arrow-up-line"></i> Top</a>
+          </div>
         </div>
       </div>
     </div>
@@ -299,4 +383,5 @@
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
