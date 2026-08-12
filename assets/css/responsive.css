@@ -24,10 +24,18 @@
   .packages-grid,
   .pricing-grid,
   .testimonial-grid,
-  .testimonials-grid {
+  .testimonials-grid,
+  .menu-items-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 30px !important;
+  }
+
+  /* 4-Column Timeline Grid on Desktop */
+  .timeline-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 28px !important;
   }
 
   /* Footer 4-Column Layout on Desktop */
@@ -284,15 +292,6 @@
 
   .drawer-overlay {
     display: block !important;
-  }
-
-  /* About Page Our Legacy Section - Center 4th Card at <= 1024px */
-  .timeline-grid > *:nth-child(4),
-  .timeline-grid > *:nth-child(4):last-child {
-    grid-column: 1 / -1 !important;
-    max-width: 380px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
   }
 
   .drawer-close-btn {

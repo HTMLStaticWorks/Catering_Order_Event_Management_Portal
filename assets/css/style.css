@@ -1198,19 +1198,26 @@ html[dir="rtl"] .drawer-close-btn {
 
 .menu-items-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  align-items: stretch;
 }
 
 .menu-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .menu-img-wrapper {
   position: relative;
-  height: 240px;
+  height: 220px;
+  width: 100%;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .menu-img-wrapper img {
@@ -1238,7 +1245,15 @@ html[dir="rtl"] .drawer-close-btn {
 }
 
 .menu-card-body {
-  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px;
+  text-align: left;
+}
+
+.dish-desc {
+  flex-grow: 1;
 }
 
 .menu-card-header {
@@ -1941,20 +1956,29 @@ body.rtl-mode .footer-links a:hover {
 /* Heritage Timeline UI */
 .timeline-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 28px;
   margin-top: 40px;
+  align-items: stretch;
 }
 
 
 .timeline-card {
   position: relative;
-  padding: 32px;
+  padding: 32px 24px;
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
   border-left: 4px solid var(--gold-primary);
   transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.timeline-card p {
+  flex-grow: 1;
 }
 
 .timeline-card:hover {
