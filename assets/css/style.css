@@ -790,6 +790,39 @@ button {
   transform: scale(1.15);
 }
 
+/* Mobile Drawer Dedicated Close/Exit Icon - Positioned Top Right Corner */
+.drawer-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  z-index: 1050;
+  outline: none;
+}
+
+.drawer-close-btn:hover {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: var(--gold-primary);
+  color: #ffffff;
+  transform: rotate(90deg) scale(1.08);
+}
+
+html[dir="rtl"] .drawer-close-btn {
+  right: auto;
+  left: 24px;
+}
+
 .drawer-links {
   display: flex;
   flex-direction: column;
@@ -1639,26 +1672,26 @@ body.light-mode select option {
 }
 
 .back-to-top-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 9999;
-  width: 46px;
-  height: 46px;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 99999 !important;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.25);
+  background: rgba(10, 10, 14, 0.88);
   border: 1px solid var(--border-gold);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--gold-primary);
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 16px rgba(212, 175, 55, 0.35);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1666,16 +1699,21 @@ body.light-mode select option {
 }
 
 .back-to-top-btn.visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .back-to-top-btn:hover {
   background: var(--gold-primary);
   color: #000000;
-  transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 12px 28px rgba(212, 175, 55, 0.5);
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
+}
+
+html[dir="rtl"] .back-to-top-btn {
+  right: auto !important;
+  left: 24px !important;
 }
 
 .footer-social-icons {
@@ -1810,6 +1848,39 @@ html[dir="rtl"] .dropdown-item {
 
 html[dir="rtl"] .drawer-dropdown-toggle {
   flex-direction: row-reverse;
+}
+
+/* RTL Footer Menu Heading & Links Alignment */
+html[dir="rtl"] .footer-grid,
+body.rtl-mode .footer-grid {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .footer-col,
+body.rtl-mode .footer-col {
+  text-align: right !important;
+  align-items: flex-start !important;
+}
+
+html[dir="rtl"] .footer-col h4,
+body.rtl-mode .footer-col h4 {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .footer-links,
+body.rtl-mode .footer-links {
+  text-align: right !important;
+  align-items: flex-start !important;
+}
+
+html[dir="rtl"] .footer-links a,
+body.rtl-mode .footer-links a {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .footer-links a:hover,
+body.rtl-mode .footer-links a:hover {
+  transform: translateX(-4px) !important;
 }
 
 /* --------------------------------------------------------------------------

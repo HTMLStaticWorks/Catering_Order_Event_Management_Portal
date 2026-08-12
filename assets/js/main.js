@@ -37,7 +37,7 @@ function initNavbarAndDrawer() {
     }
 
     if (backToTopBtn) {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 100) {
         backToTopBtn.classList.add('visible');
       } else {
         backToTopBtn.classList.remove('visible');
@@ -58,10 +58,10 @@ function initNavbarAndDrawer() {
     document.body.style.overflow = drawer?.classList.contains('open') ? 'hidden' : '';
   }
 
-  const drawerCloseBtn = document.querySelector('.drawer-close-btn');
+  const drawerCloseBtns = document.querySelectorAll('.drawer-close-btn');
   hamburger?.addEventListener('click', toggleDrawer);
   overlay?.addEventListener('click', toggleDrawer);
-  drawerCloseBtn?.addEventListener('click', toggleDrawer);
+  drawerCloseBtns.forEach(btn => btn.addEventListener('click', toggleDrawer));
 
   drawerLinks.forEach(link => {
     link.addEventListener('click', () => {

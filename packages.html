@@ -93,33 +93,33 @@
   <!-- Mobile Drawer -->
   <div class="drawer-overlay"></div>
   <aside class="mobile-drawer">
+    <button class="drawer-close-btn" aria-label="Close Menu" title="Close Menu">
+      <i class="ri-close-line"></i>
+    </button>
+
     <!-- Quick Tools & Actions (Theme, RTL, Login, Dashboard, Order Tracking) -->
     <div class="drawer-tools">
       <button class="drawer-tool-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
         <i class="ri-moon-line"></i>
-        <span>Theme</span>
       </button>
       <button class="drawer-tool-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
         <i class="ri-arrow-left-right-line"></i>
-        <span>RTL</span>
       </button>
       <a href="login.html" class="drawer-tool-btn" title="Client Login">
         <i class="ri-user-3-line"></i>
-        <span>Login</span>
       </a>
       <a href="dashboard.html" class="drawer-tool-btn" title="Client Dashboard">
         <i class="ri-dashboard-3-line"></i>
-        <span>Dashboard</span>
       </a>
       <a href="order-tracking.html" class="drawer-tool-btn" title="Track Live Order">
         <i class="ri-radar-line"></i>
-        <span>Track Order</span>
       </a>
     </div>
 
     <div class="drawer-links">
       <div class="drawer-dropdown">
-        <button class="drawer-dropdown-toggle">Home <i class="ri-chevron-down-line"></i></button>
+        <button class="drawer-dropdown-toggle"><i class="ri-home-4-line"></i> Home <i
+            class="ri-chevron-down-line"></i></button>
         <div class="drawer-dropdown-menu">
           <a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home 01</a>
           <a href="home-2.html" class="drawer-link"><i class="ri-home-gear-line"></i> Home 02</a>
@@ -158,8 +158,9 @@
           style="padding:36px; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div class="section-tag" style="margin-bottom:20px;">Silver Feast</div>
-            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-top:8px; margin-bottom:14px;">$65 <span
-                style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
+            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-top:8px; margin-bottom:14px;">$65
+              <span style="font-size:0.9rem; color:var(--text-muted);">/ guest</span>
+            </h3>
             <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Ideal for intimate gatherings,
               birthdays, and cocktail receptions.</p>
             <ul
@@ -170,7 +171,7 @@
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 1 Chef per 25 Guests</li>
             </ul>
           </div>
-          <a href="dashboard.html" class="btn-secondary">Select Silver Package</a>
+          <a href="dashboard.html" class="btn-secondary">Silver Package</a>
         </div>
 
         <div class="glass-card"
@@ -179,8 +180,9 @@
             <div class="section-tag"
               style="background:var(--gold-gradient); color:#000; font-weight:700; margin-bottom:20px;">★ Most Popular
             </div>
-            <h3 class="font-serif gold-gradient-text" style="font-size:2.4rem; margin-top:8px; margin-bottom:14px;">$95 <span
-                style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
+            <h3 class="font-serif gold-gradient-text" style="font-size:2.4rem; margin-top:8px; margin-bottom:14px;">$95
+              <span style="font-size:0.9rem; color:var(--text-muted);">/ guest</span>
+            </h3>
             <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Perfect for weddings,
               corporate galas, and anniversary banquets.</p>
             <ul
@@ -193,15 +195,16 @@
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> Live Order GPS Telemetry</li>
             </ul>
           </div>
-          <a href="dashboard.html" class="btn-primary">Select Royal Velvet </a>
+          <a href="dashboard.html" class="btn-primary">Royal Velvet </a>
         </div>
 
         <div class="glass-card"
           style="padding:36px; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
             <div class="section-tag" style="margin-bottom:20px;">Diamond Signature</div>
-            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-top:8px; margin-bottom:14px;">$175 <span
-                style="font-size:0.9rem; color:var(--text-muted);">/ guest</span></h3>
+            <h3 class="font-serif gold-gradient-text" style="font-size:2rem; margin-top:8px; margin-bottom:14px;">$175
+              <span style="font-size:0.9rem; color:var(--text-muted);">/ guest</span>
+            </h3>
             <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Ultra-VIP state dinners,
               celebrity galas, and yacht events.</p>
             <ul
@@ -216,7 +219,7 @@
               <li><i class="ri-check-line" style="color:var(--gold-primary);"></i> 3D Projection Mapping on Plates</li>
             </ul>
           </div>
-          <a href="dashboard.html" class="btn-secondary">Select Diamond Package</a>
+          <a href="dashboard.html" class="btn-secondary">Diamond Package</a>
         </div>
 
       </div>
@@ -394,12 +397,15 @@
           <p>&copy; 2026 Royal Feast Events. All Rights Reserved. Crafted for Extraordinary Hospitality.</p>
           <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
             <p>Enterprise Luxury Standard | 60 FPS Accelerated</p>
-            <a href="#top" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top"><i class="ri-arrow-up-line"></i></a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Floating Back-to-Top Button (Visible across all sections) -->
+  <a href="#top" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top"><i
+      class="ri-arrow-up-line"></i></a>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
