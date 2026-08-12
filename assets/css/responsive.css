@@ -144,8 +144,7 @@
   .team-grid > *:nth-child(3):last-child,
   .leadership-grid > *:nth-child(3):last-child,
   .packages-grid > *:nth-child(3):last-child,
-  .menu-items-grid > *:nth-child(3):last-child,
-  .menu-items-grid > *:nth-child(3) {
+  .menu-items-grid > *:nth-child(3):last-child {
     grid-column: 1 / -1 !important;
     max-width: 500px !important;
     width: 100% !important;
