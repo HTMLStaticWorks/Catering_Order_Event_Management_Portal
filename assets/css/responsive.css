@@ -1,11 +1,11 @@
 /* ==========================================================================
-   ROYAL FEAST EVENTS - RESPONSIVE STYLESHEET (STRICT 1024px RULE)
+   ROYAL FEAST EVENTS - RESPONSIVE STYLESHEET (OPTIMIZED BREAKPOINTS)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. DESKTOP ONLY (1025px AND ABOVE)
+   1. DESKTOP ONLY (992px AND ABOVE) - WEB VIEW ALIGNMENT
    -------------------------------------------------------------------------- */
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
   .hamburger-toggle {
     display: none !important;
   }
@@ -15,13 +15,96 @@
   .drawer-overlay {
     display: none !important;
   }
+
+  /* 3-Column Grid Alignment Guarantee on Web View */
+  .grid-3-col,
+  .services-grid,
+  .team-grid,
+  .leadership-grid,
+  .packages-grid,
+  .pricing-grid,
+  .testimonial-grid,
+  .testimonials-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+  }
+
+  /* Footer 4-Column Layout on Desktop */
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: 2fr repeat(3, 1fr) !important;
+    gap: 40px !important;
+    text-align: left !important;
+  }
+
+  .footer-col {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .footer-links {
+    align-items: flex-start !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   2. TABLET & MOBILE (1024px AND BELOW) - MANDATORY RULES
+   2. TABLET VIEW (577px - 991px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 577px) and (max-width: 991px) {
+  /* Footer Grid: Clean 2x2 Grid Alignment on Tablet Screens */
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+    text-align: left !important;
+  }
+
+  .footer-col {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .footer-links {
+    align-items: flex-start !important;
+  }
+
+  /* 2-Column Grid Alignment for Cards on Tablet */
+  .grid-3-col,
+  .services-grid,
+  .team-grid,
+  .leadership-grid,
+  .packages-grid,
+  .pricing-grid,
+  .testimonial-grid,
+  .testimonials-grid,
+  .timeline-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .grid-3-col > *:nth-child(3):last-child,
+  .services-grid > *:nth-child(3):last-child,
+  .team-grid > *:nth-child(3):last-child,
+  .leadership-grid > *:nth-child(3):last-child,
+  .packages-grid > *:nth-child(3):last-child {
+    grid-column: 1 / -1 !important;
+    max-width: 500px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .dash-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. TABLET & MOBILE (1024px AND BELOW) - NAVBAR & DRAWER RULES
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  /* NAVBAR RULE: LOGO ON LEFT, HAMBURGER TOGGLE ON RIGHT. ALL TOOL ICONS & NAV LINKS KEPT INSIDE HAMBURGER DRAWER */
   .navbar {
     padding: 14px 0 !important;
   }
@@ -56,7 +139,6 @@
     letter-spacing: 0.5px !important;
   }
 
-  /* Hide desktop text nav links, book now actions, and extra icon buttons from top header navbar */
   .nav-links,
   .nav-actions,
   .nav-controls > .nav-icon-btn {
@@ -80,329 +162,8 @@
     margin: 0 !important;
     flex-shrink: 0 !important;
   }
-}
 
-  /* MANDATORY CENTER ALIGNMENT FOR ALL CONTENT ON <= 1024px */
-  .hero-content,
-  .section-title,
-  .section-subtitle,
-  .services-grid,
-  .menu-card-body,
-  .menu-card-header,
-  .booking-widget-bar,
-  .timeline-content,
-  .footer-grid,
-  .footer-bottom,
-  .stat-widget,
-  .form-group,
-  .contact-info-card {
-    text-align: center !important;
-  }
-
-  /* Stat widgets grid below hero: 2x2 grid alignment on tablet view */
-  .dash-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
-    text-align: center !important;
-  }
-
-  /* Chef's Tasting Table Section on Tab View: Heading, Text, List & Button Centered */
-  .chef-tasting-card {
-    text-align: center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  .chef-tasting-card h3,
-  .chef-tasting-card p {
-    text-align: center !important;
-  }
-
-  .chef-tasting-card ul {
-    display: inline-flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    margin: 0 auto 20px auto !important;
-  }
-
-  .chef-tasting-card .btn-primary {
-    margin: 0 auto !important;
-    align-self: center !important;
-  }
-
-  .hero-btn-group,
-  .menu-tabs,
-  .widget-field,
-  .footer-links,
-  .footer-col,
-  .drawer-links,
-  .drawer-contact {
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  /* Booking Widget Stack */
-  .booking-widget-bar {
-    grid-template-columns: 1fr !important;
-    padding: 24px 20px !important;
-    gap: 16px !important;
-  }
-
-  .widget-field label {
-    text-align: center !important;
-  }
-
-  /* Footer Layout Guarantee: Keep in 4 Columns on Desktop & Tablet Screens (>= 577px) */
-  .footer-glass-box {
-    padding: 40px 32px !important;
-  }
-
-  .footer-grid {
-    display: grid !important;
-    grid-template-columns: 1.6fr repeat(3, 1fr) !important;
-    gap: 28px !important;
-    text-align: left !important;
-  }
-
-  html[dir="rtl"] .footer-grid,
-  body.rtl-mode .footer-grid {
-    text-align: right !important;
-  }
-
-  .footer-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
-    padding-bottom: 0 !important;
-    border-bottom: none !important;
-  }
-
-  html[dir="rtl"] .footer-col,
-  body.rtl-mode .footer-col {
-    align-items: flex-end !important;
-    text-align: right !important;
-  }
-    border-bottom: none !important;
-    padding-bottom: 0 !important;
-  }
-
-  .footer-brand-col {
-    border-bottom: 1px solid var(--border-glass) !important;
-  }
-
-  .footer-brand-col .logo-wrapper {
-    justify-content: center !important;
-    margin: 0 auto 14px auto !important;
-  }
-
-  .footer-bio {
-    text-align: center !important;
-    margin: 0 auto 16px auto !important;
-    max-width: 500px !important;
-  }
-
-  .footer-social-icons {
-    justify-content: center !important;
-    margin: 0 auto !important;
-  }
-
-  .footer-col h4 {
-    margin-bottom: 14px !important;
-    text-align: center !important;
-  }
-
-  .footer-col h4::after {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .footer-links {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    gap: 10px !important;
-  }
-
-  .footer-links a {
-    justify-content: center !important;
-    text-align: center !important;
-  }
-
-  .footer-bottom {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    gap: 14px !important;
-    margin-top: 10px !important;
-  }
-
-  /* Michelin Mastery Section: Image below text on tablet view */
-  .michelin-mastery-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 32px !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .michelin-mastery-grid > div:first-child {
-    order: 1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  .michelin-mastery-grid > div:last-child {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: 540px !important;
-    margin: 0 auto !important;
-  }
-
-  .michelin-mastery-grid ul {
-    align-items: flex-start !important;
-    margin: 0 auto 24px auto !important;
-  }
-
-  /* Hero Section alignment & card overlap prevention on mobile/tab view */
-  .hero-section {
-    min-height: auto !important;
-    padding-top: 140px !important;
-    padding-bottom: 50px !important;
-    overflow: hidden !important;
-    position: relative !important;
-  }
-
-  .hero-content {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 16px !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    z-index: 5 !important;
-  }
-
-  .hero-content .section-tag,
-  .hero-content .hero-badge,
-  .section-tag {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 6px !important;
-    margin-bottom: 24px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    max-width: 90% !important;
-    white-space: normal !important;
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .hero-content .section-title,
-  .hero-content h1,
-  .hero-content h2,
-  .section-title {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 10px !important;
-    margin-bottom: 24px !important;
-    line-height: 1.3 !important;
-    width: 100% !important;
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .hero-content p,
-  .section-subtitle {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 10px !important;
-    margin-bottom: 40px !important;
-    width: 100% !important;
-    line-height: 1.6 !important;
-  }
-
-  /* Timeline Single Column Center Stack */
-  .timeline-line {
-    left: 24px !important;
-  }
-
-  .timeline-step {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding-left: 60px !important;
-  }
-
-  .timeline-step:nth-child(even) {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  .timeline-badge {
-    left: 24px !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .timeline-content {
-    width: 100% !important;
-    padding: 20px !important;
-  }
-
-/* Client Dashboard Desktop / Laptop Explicit Fixed Sidebar Rule (>= 900px) */
-@media (min-width: 900px) {
-  .dashboard-wrapper {
-    display: flex !important;
-    flex-direction: row !important;
-    padding-top: 85px !important;
-  }
-
-  .dashboard-sidebar {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    position: fixed !important;
-    top: 85px !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    width: 270px !important;
-    z-index: 100 !important;
-    background: var(--bg-secondary) !important;
-    border-right: 1px solid var(--border-gold) !important;
-    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.4) !important;
-    overflow-y: auto !important;
-  }
-
-  .dashboard-main {
-    margin-left: 270px !important;
-    width: calc(100% - 270px) !important;
-    padding: 40px !important;
-  }
-}
-
-/* Client Dashboard Mobile / Small Tablet View (< 900px) */
-@media (max-width: 899px) {
-  .dashboard-wrapper {
-    flex-direction: column !important;
-    padding-top: 80px !important;
-  }
-
+  /* Dashboard Sidebar & Hamburger Menu Integration on <= 1024px */
   .dashboard-sidebar {
     display: none !important;
   }
@@ -412,108 +173,47 @@
     padding: 24px 16px !important;
     width: 100% !important;
   }
-}
 
-  /* Touch Targets Guarantee */
-  button, 
-  a.btn-primary, 
-  a.btn-secondary, 
-  .tab-btn, 
-  .dash-nav-item, 
-  .form-control {
-    min-height: 48px;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   TABLET & DESKTOP WEB VIEW GRID ALIGNMENT & 3RD CARD CENTERING
-   -------------------------------------------------------------------------- */
-@media (min-width: 577px) {
-  /* Home Page 01 3-column & Services Grid 3rd card centered */
-  .grid-3-col,
-  .team-grid,
-  .leadership-grid,
-  .packages-grid,
-  .pricing-grid,
-  .testimonial-grid,
-  .testimonials-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 28px !important;
-  }
-
-  .grid-3-col > *:nth-child(3):last-child,
-  .services-grid > *:nth-child(3):last-child,
-  .team-grid > *:nth-child(3):last-child,
-  .leadership-grid > *:nth-child(3):last-child,
-  .pricing-grid > *:nth-child(3):last-child,
-  .packages-grid > *:nth-child(3):last-child,
-  .testimonial-grid > *:nth-child(3):last-child,
-  .testimonials-grid > *:nth-child(3):last-child {
-    grid-column: 1 / -1 !important;
-    max-width: 480px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    justify-self: center !important;
-  }
-
-  /* Home Page 02 icons & features aligned */
-  .feature-card,
-  .suite-card,
-  .feature-icon-box {
-    display: flex !important;
+  .dashboard-wrapper {
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-  
-  .feature-card .icon-box,
-  .suite-card .icon-box {
-    margin: 0 auto 16px auto !important;
+    padding-top: 80px !important;
   }
 
-  /* Event Types Page buttons aligned & centered */
-  .event-card,
-  .event-types-grid > * {
+  /* Hamburger Drawer Alignment on <= 1024px */
+  .mobile-drawer {
+    padding-top: 80px !important;
+  }
+
+  .drawer-tools {
     display: flex !important;
-    flex-direction: column !important;
     align-items: center !important;
-    text-align: center !important;
-  }
-
-  .event-card .btn-primary,
-  .event-card .btn-secondary,
-  .event-card .service-link,
-  .event-card a.btn-gold {
-    margin: 16px auto 0 auto !important;
-    display: inline-flex !important;
-    align-self: center !important;
     justify-content: center !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .drawer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     text-align: center !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  .drawer-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    font-size: 1.05rem !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 }
 
 /* --------------------------------------------------------------------------
-   3. SMALL TABLETS & LARGE PHONES (768px - 820px)
-   -------------------------------------------------------------------------- */
-@media (max-width: 820px) {
-  .hero-section {
-    padding-top: 120px !important;
-    padding-bottom: 60px !important;
-  }
-
-  .hero-title {
-    font-size: 2.6rem !important;
-  }
-
-  .menu-items-grid,
-  .gallery-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   4. MOBILE PHONES (320px, 360px, 375px, 390px, 414px, 425px, 480px, 576px)
+   4. MOBILE PHONES (576px AND BELOW)
    -------------------------------------------------------------------------- */
 @media (max-width: 576px) {
   .container {
@@ -521,7 +221,13 @@
   }
 
   .py-section {
-    padding: 60px 0 !important;
+    padding: 50px 0 !important;
+  }
+
+  .hero-section {
+    padding-top: 130px !important;
+    padding-bottom: 50px !important;
+    min-height: auto !important;
   }
 
   .hero-title {
@@ -532,7 +238,6 @@
     font-size: 0.98rem !important;
   }
 
-  /* Hero Section Buttons: EXACT SAME SIZE, WIDTH, HEIGHT & PADDING ON MOBILE VIEW */
   .hero-btn-group {
     flex-direction: column !important;
     align-items: center !important;
@@ -544,52 +249,97 @@
   .hero-btn-group .btn-secondary {
     width: 100% !important;
     max-width: 320px !important;
-    min-height: 52px !important;
-    height: 52px !important;
+    min-height: 48px !important;
+    height: 48px !important;
     padding: 0 20px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-size: 0.88rem !important;
-    box-sizing: border-box !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-    white-space: nowrap !important;
   }
 
-  /* Stat grid on small mobile: 1 column or 2 columns based on fit */
+  /* Booking Widget Stack on Mobile */
+  .booking-widget-bar {
+    grid-template-columns: 1fr !important;
+    padding: 20px 16px !important;
+    gap: 14px !important;
+  }
+
+  .widget-field label {
+    text-align: center !important;
+  }
+
+  /* Stat grid on Mobile */
   .dash-grid {
     grid-template-columns: 1fr !important;
-  }
-
-  .mobile-drawer {
-    max-width: 100% !important;
-    padding: 90px 20px 30px 20px !important;
+    gap: 12px !important;
   }
 
   .stat-widget {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Footer Section Stacked on Mobile View */
+  .footer-glass-box {
+    padding: 32px 20px !important;
+  }
+
+  .footer-grid {
+    display: flex !important;
     flex-direction: column !important;
+    gap: 28px !important;
+    text-align: center !important;
   }
 
-  .modal-body {
-    padding: 24px 16px !important;
-    width: 95% !important;
+  .footer-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
-  /* Global Mobile Screen Fit & Side Touch Prevention */
+  .footer-col:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .footer-social-icons {
+    justify-content: center !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+  }
+
+  /* Stack Card Grids on Mobile */
   .services-grid,
   .grid-2-col,
   .grid-3-col,
   .grid-4-col,
-  .dash-grid,
   .menu-items-grid,
   .gallery-grid,
   .timeline-grid {
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
     gap: 20px !important;
   }
 
@@ -602,20 +352,15 @@
   .menu-card,
   .contact-info-card {
     width: 100% !important;
-    max-width: 100% !important;
     box-sizing: border-box !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
   }
 }
 
 @media (max-width: 375px) {
   .hero-title {
-    font-size: 1.85rem !important;
+    font-size: 1.8rem !important;
   }
   .logo-text {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 }

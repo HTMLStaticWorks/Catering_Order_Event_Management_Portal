@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Client Login | Royal Feast Events Portal</title>
-  <meta name="description" content="Secure client login for Royal Feast Events AI event planning, live order tracking, menu customization, and invoice management.">
+  <meta name="description"
+    content="Secure client login for Royal Feast Events AI event planning, live order tracking, menu customization, and invoice management.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- Remix Icon CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
@@ -21,6 +25,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 
   <div class="bg-aurora-wrapper">
@@ -40,16 +45,18 @@
   </div>
 
   <!-- Login Section -->
-  <section class="hero-section text-center" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:40px 20px;">
+  <section class="hero-section text-center auth-hero">
     <div class="container">
-      <div class="glass-card" style="max-width:440px; margin:0 auto; padding:36px 32px; text-align:center;">
-        <a href="index.html" class="logo-wrapper" style="display:inline-flex; margin-bottom:20px; text-decoration:none;">
-          <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
-          <div class="logo-text"><span>FEAST</span></div>
-        </a>
-        
-        <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:8px;">Client Portal Login</h2>
-        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Access your 2026 AI event suite & live logistics tracker.</p>
+      <div class="glass-card" style="max-width:440px; margin:0 auto; padding:36px 32px;">
+        <div style="display:flex; justify-content:center; margin-bottom:24px;">
+          <a href="index.html" class="logo-wrapper" style="display:inline-flex; text-decoration:none;">
+            <div class="logo-icon"><i class="ri-goblet-fill"></i></div>
+            <div class="logo-text"><span>FEAST</span></div>
+          </a>
+        </div>
+
+        <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:8px; text-align:left;">Client Portal Login</h2>
+        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px; text-align:left;">Access your 2026 AI event suite & live logistics tracker.</p>
 
         <form action="dashboard.html" method="GET">
           <div class="form-group" style="text-align:left;">
@@ -72,12 +79,20 @@
             <a href="#" class="auth-link" style="color:var(--gold-light);">Forgot Password?</a>
           </div>
 
-          <button type="submit" class="btn-primary auth-btn-compact">
-            Login to Dashboard <i class="ri-arrow-right-line"></i>
+          <button type="submit" class="btn-primary auth-btn-full">
+            Log In <i class="ri-arrow-right-line" style="margin-left:6px;"></i>
           </button>
         </form>
 
-        <div style="margin-top:24px; font-size:0.9rem; color:var(--text-muted);">
+        <div class="social-divider"><span>or continue with</span></div>
+
+        <div class="social-login-group">
+          <button type="button" class="social-btn" title="Login with Google"><i class="ri-google-fill"></i></button>
+          <button type="button" class="social-btn" title="Login with Apple"><i class="ri-apple-fill"></i></button>
+          <button type="button" class="social-btn" title="Login with LinkedIn"><i class="ri-linkedin-fill"></i></button>
+        </div>
+
+        <div style="margin-top:20px; font-size:0.9rem; color:var(--text-muted); text-align:center;">
           Don't have an event portal account? <a href="register.html" class="auth-link" style="color:var(--gold-primary); font-weight:600;">Register Now</a>
         </div>
       </div>
@@ -88,4 +103,5 @@
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

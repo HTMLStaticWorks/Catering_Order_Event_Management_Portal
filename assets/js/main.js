@@ -27,13 +27,27 @@ function initNavbarAndDrawer() {
   const overlay = document.querySelector('.drawer-overlay');
   const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-cta a, .drawer-tools a');
 
-  // Scroll effect
+  // Scroll effect & Back to Top floating button toggle
+  const backToTopBtn = document.querySelector('.back-to-top-btn');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       navbar?.classList.add('scrolled');
     } else {
       navbar?.classList.remove('scrolled');
     }
+
+    if (backToTopBtn) {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+  });
+
+  backToTopBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // Drawer Toggle
@@ -44,8 +58,10 @@ function initNavbarAndDrawer() {
     document.body.style.overflow = drawer?.classList.contains('open') ? 'hidden' : '';
   }
 
+  const drawerCloseBtn = document.querySelector('.drawer-close-btn');
   hamburger?.addEventListener('click', toggleDrawer);
   overlay?.addEventListener('click', toggleDrawer);
+  drawerCloseBtn?.addEventListener('click', toggleDrawer);
 
   drawerLinks.forEach(link => {
     link.addEventListener('click', () => {

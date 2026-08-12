@@ -38,7 +38,7 @@
         <div class="logo-text"><span>FEAST</span></div>
       </a>
 
-      <!-- Navbar Controls (Theme, RTL, Login, Dashboard, Track Order & Actions) -->
+      <!-- Navbar Controls (Theme & RTL ONLY) -->
       <div class="nav-controls">
         <button class="nav-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
           <i class="ri-moon-line"></i>
@@ -46,25 +46,6 @@
         <button class="nav-icon-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
           <i class="ri-arrow-left-right-line"></i>
         </button>
-        <a href="login.html" class="nav-icon-btn" aria-label="Client Login" title="Client Login">
-          <i class="ri-user-3-line"></i>
-        </a>
-        <a href="dashboard.html" class="nav-icon-btn active" aria-label="Client Dashboard" title="Client Dashboard">
-          <i class="ri-dashboard-3-line"></i>
-        </a>
-        <a href="order-tracking.html" class="nav-icon-btn" aria-label="Track Order" title="Track Live Order">
-          <i class="ri-radar-line"></i>
-        </a>
-
-      <!-- Navbar Controls (Theme, RTL & Hamburger ONLY) -->
-      <div class="nav-controls">
-        <button class="nav-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
-          <i class="ri-moon-line"></i>
-        </button>
-        <button class="nav-icon-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
-          <i class="ri-arrow-left-right-line"></i>
-        </button>
-
         <button class="hamburger-toggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -81,18 +62,18 @@
     <div class="drawer-tools">
       <button class="drawer-tool-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
         <i class="ri-moon-line"></i>
-        <span>Theme</span>
       </button>
       <button class="drawer-tool-btn rtl-toggle-btn" aria-label="Toggle RTL" title="Toggle RTL/LTR Direction">
         <i class="ri-arrow-left-right-line"></i>
-        <span>RTL</span>
+      </button>
+      <button class="drawer-tool-btn drawer-close-btn" aria-label="Close Menu" title="Close Menu">
+        <i class="ri-close-line"></i>
       </button>
     </div>
 
     <div class="drawer-links">
-      <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold-primary); font-weight:700; display:block; margin-bottom:14px; text-align:center; border-bottom:1px solid var(--border-glass); padding-bottom:10px;">Client Dashboard Menu</span>
       <a href="#overview" class="drawer-link dash-nav-item active" data-target="dash-overview"><i class="ri-dashboard-line"></i> Overview</a>
-      <a href="#ai-planner" class="drawer-link dash-nav-item" data-target="dash-ai-planner"><i class="ri-sparkles-line"></i> AI Event Planner</a>
+      <a href="#ai-planner" class="drawer-link dash-nav-item" data-target="dash-ai-planner"><i class="ri-magic-line"></i> AI Event Planner</a>
       <a href="#menu-builder" class="drawer-link dash-nav-item" data-target="dash-menu-builder"><i class="ri-restaurant-2-line"></i> Menu Builder</a>
       <a href="#guest-calc" class="drawer-link dash-nav-item" data-target="dash-guest-calc"><i class="ri-user-star-line"></i> Guest & Budget Calc</a>
       <a href="#live-tracking" class="drawer-link dash-nav-item" data-target="dash-live-tracking"><i class="ri-radar-line"></i> Live Order Tracking</a>
@@ -110,7 +91,7 @@
     <aside class="dashboard-sidebar">
       <div class="dashboard-sidebar-menu">
         <a href="#overview" class="dash-nav-item active" data-target="dash-overview"><i class="ri-dashboard-line"></i> Overview</a>
-        <a href="#ai-planner" class="dash-nav-item" data-target="dash-ai-planner"><i class="ri-sparkles-line"></i> AI Event Planner</a>
+        <a href="#ai-planner" class="dash-nav-item" data-target="dash-ai-planner"><i class="ri-magic-line"></i> AI Event Planner</a>
         <a href="#menu-builder" class="dash-nav-item" data-target="dash-menu-builder"><i class="ri-restaurant-2-line"></i> Menu Builder</a>
         <a href="#guest-calc" class="dash-nav-item" data-target="dash-guest-calc"><i class="ri-user-star-line"></i> Guest & Budget Calc</a>
         <a href="#live-tracking" class="dash-nav-item" data-target="dash-live-tracking"><i class="ri-radar-line"></i> Live Order Tracking</a>
@@ -354,20 +335,20 @@
         <h2 class="font-serif gold-gradient-text" style="font-size:1.8rem; margin-bottom:12px;">Assigned Culinary Brigade</h2>
         <p style="color:var(--text-secondary); margin-bottom:24px;">Your event is assigned dedicated Michelin-starred leads and certified sommeliers.</p>
 
-        <div class="dash-grid">
-          <div class="glass-card" style="padding:24px; text-align:center;">
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:24px;">
+          <div class="glass-card" style="padding:24px; text-align:center; flex:1 1 260px; max-width:340px;">
             <img src="image/Chefs at Work (10)as.jpg" alt="Chef Vance" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 12px auto; border:2px solid var(--gold-primary);">
             <h4 class="font-serif gold-gradient-text">Chef Alexander Vance</h4>
             <p style="color:var(--gold-light); font-size:0.8rem;">Executive Culinary Director</p>
           </div>
 
-          <div class="glass-card" style="padding:24px; text-align:center;">
+          <div class="glass-card" style="padding:24px; text-align:center; flex:1 1 260px; max-width:340px;">
             <img src="image/Chefs at Work (10)ds.jpg" alt="Chef Elena Rostova" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 12px auto; border:2px solid var(--gold-primary);">
             <h4 class="font-serif gold-gradient-text">Elena Rostova</h4>
             <p style="color:var(--gold-light); font-size:0.8rem;">Head Pastry Architect</p>
           </div>
 
-          <div class="glass-card" style="padding:24px; text-align:center;">
+          <div class="glass-card" style="padding:24px; text-align:center; flex:1 1 260px; max-width:340px;">
             <img src="image/Chefs at Work (10)ws.jpg" alt="Marcus Thorne" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 12px auto; border:2px solid var(--gold-primary);">
             <h4 class="font-serif gold-gradient-text">Marcus Thorne</h4>
             <p style="color:var(--gold-light); font-size:0.8rem;">Master Sommelier Lead</p>
