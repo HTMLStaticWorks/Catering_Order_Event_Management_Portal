@@ -80,6 +80,27 @@ function initNavbarAndDrawer() {
       parent?.classList.toggle('open');
     });
   });
+
+  // Desktop Dropdown Click Toggle for Touch / Accessibility (Item 9)
+  const navDropdowns = document.querySelectorAll('.nav-dropdown');
+  navDropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    toggle?.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const wasActive = dropdown.classList.contains('active');
+      navDropdowns.forEach(d => d.classList.remove('active'));
+      if (!wasActive) {
+        dropdown.classList.add('active');
+      }
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-dropdown')) {
+      navDropdowns.forEach(d => d.classList.remove('active'));
+    }
+  });
 }
 
 /* --------------------------------------------------------------------------

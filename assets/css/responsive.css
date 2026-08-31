@@ -565,3 +565,67 @@
     font-size: 1.2rem !important;
   }
 }
+
+/* Mobile (<= 768px & 360px) Flawless Process Timeline Alignment Fix */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 30px !important;
+  }
+
+  .timeline-line {
+    left: 20px !important;
+    transform: none !important;
+  }
+
+  .timeline-step,
+  .timeline-step:nth-child(even) {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding-left: 56px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+  }
+
+  .timeline-badge {
+    left: 0 !important;
+    top: 6px !important;
+    transform: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 0.88rem !important;
+  }
+
+  .timeline-content {
+    width: 100% !important;
+    text-align: left !important;
+    padding: 16px 20px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Tablet (992px - 1024px) Unmatched Mobility Image Alignment & Card Aspect Ratio */
+@media (min-width: 992px) and (max-width: 1024px) {
+  .grid-3-col {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .grid-3-col .glow-gold-card {
+    padding: 16px !important;
+  }
+
+  .grid-3-col .img-zoom-wrapper {
+    height: 160px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .grid-3-col .img-zoom-wrapper img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}

@@ -342,6 +342,8 @@ button {
 .btn-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 10px;
   padding: 14px 32px;
   background: rgba(255, 255, 255, 0.14);
@@ -484,7 +486,8 @@ button {
   transition: transform 0.3s ease;
 }
 
-.nav-dropdown:hover .dropdown-toggle i {
+.nav-dropdown:hover .dropdown-toggle i,
+.nav-dropdown.active .dropdown-toggle i {
   transform: rotate(180deg);
 }
 
@@ -503,12 +506,23 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(12px);
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  transform: translateY(10px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
   z-index: 1100;
 }
 
-.nav-dropdown:hover .dropdown-menu {
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown.active .dropdown-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -891,9 +905,9 @@ html[dir="rtl"] .drawer-close-btn {
    -------------------------------------------------------------------------- */
 .hero-section {
   position: relative;
-  min-height: 52vh;
-  padding-top: 160px;
-  padding-bottom: 50px !important;
+  min-height: calc(100vh - 90px);
+  padding-top: 105px !important;
+  padding-bottom: 35px !important;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -901,7 +915,7 @@ html[dir="rtl"] .drawer-close-btn {
 
 .hero-section + .py-section,
 .hero-section + section {
-  padding-top: 60px !important;
+  padding-top: 50px !important;
 }
 
 /* AI Hero Background Overlay Utility Classes */
@@ -962,9 +976,9 @@ html[dir="rtl"] .drawer-close-btn {
 .hero-content {
   position: relative;
   z-index: 3;
-  max-width: 880px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 42px 36px !important;
+  padding: 30px 32px !important;
   background: rgba(10, 10, 12, 0.45);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -977,17 +991,17 @@ html[dir="rtl"] .drawer-close-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 20px;
+  padding: 6px 18px;
   background: rgba(212, 175, 55, 0.18);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-full);
   color: #f7e7ce;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   font-weight: 500;
-  margin-top: 4px;
-  margin-bottom: 28px !important;
+  margin-top: 0;
+  margin-bottom: 14px !important;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 2;
@@ -995,32 +1009,33 @@ html[dir="rtl"] .drawer-close-btn {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  font-size: clamp(2.3rem, 4.2vw, 4.2rem);
   font-weight: 700;
-  line-height: 1.28 !important;
+  line-height: 1.22 !important;
   color: #ffffff;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
-  margin-top: 8px !important;
-  margin-bottom: 26px !important;
+  margin-top: 4px !important;
+  margin-bottom: 14px !important;
   position: relative;
   z-index: 2;
 }
 
 .hero-description {
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.4vw, 1.12rem);
   color: #e4e4e7;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-  margin-bottom: 36px;
+  margin-bottom: 22px;
   font-weight: 400;
+  line-height: 1.55;
 }
 
 .hero-btn-group {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 22px;
 }
 
 /* Quick Booking Floating Bar */
@@ -1029,14 +1044,14 @@ html[dir="rtl"] .drawer-close-btn {
   backdrop-filter: blur(25px);
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-lg);
-  padding: 24px 32px;
+  padding: 18px 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) auto;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) auto;
+  gap: 16px;
   align-items: center;
   box-shadow: var(--shadow-glass);
-  margin-top: 36px;
-  margin-bottom: 24px;
+  margin-top: 18px;
+  margin-bottom: 10px;
 }
 
 .widget-field {
@@ -1051,6 +1066,9 @@ html[dir="rtl"] .drawer-close-btn {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .widget-field select,
@@ -1061,6 +1079,17 @@ html[dir="rtl"] .drawer-close-btn {
   border-radius: var(--radius-sm);
   color: var(--text-primary);
   font-size: 0.9rem;
+}
+
+.widget-field input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.85) sepia(1) saturate(5) hue-rotate(5deg);
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+body.light-mode .widget-field input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: none;
+  opacity: 0.85;
 }
 
 /* --------------------------------------------------------------------------
@@ -2594,6 +2623,67 @@ body.light-mode .tracking-step {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Light Mode Navbar Brand Name High Visibility Fix (Item 8) */
+body.light-mode .logo-text,
+body.light-theme .logo-text {
+  color: #1a1610 !important;
+  text-shadow: none !important;
+  font-weight: 800 !important;
+}
+
+body.light-mode .logo-text span,
+body.light-theme .logo-text span {
+  color: #946c00 !important;
+  font-weight: 800 !important;
+}
+
+/* Auth Links Contrast & Visibility (Item 7) */
+.auth-link {
+  color: var(--gold-primary) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: var(--transition-fast) !important;
+}
+
+.auth-link:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+body.light-mode .auth-link,
+body.light-theme .auth-link {
+  color: #8c6000 !important;
+  font-weight: 700 !important;
+}
+
+body.light-mode .auth-link:hover,
+body.light-theme .auth-link:hover {
+  color: #000000 !important;
+}
+
+/* Dashboard Full-Width Navbar Container (Item 1) */
+.dashboard-navbar-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Equal Height & Aligned Card CTAs */
+.card-equal-cta {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+}
+
+.card-equal-cta .card-bottom-cta {
+  margin-top: auto !important;
   width: 100% !important;
 }
 
